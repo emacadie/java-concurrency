@@ -6,28 +6,24 @@ Based on code at http://vogella.com/articles/JavaConcurrency/article.htm
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import info.shelfunit.util.ShelfLogger;
+import org.apache.log4j.Logger;
+
 public class CallableFutures {
     private static final int NTHREDS = 10;
     private static int iterations; 
 
-    public static void setIterations() {
-	if ( System.getProperties().containsKey( "iterations" ) ) {
-	    System.out.println( "System has the key iterations" );
-	} else {
-	    System.out.println( "System does not have the key iterations" );
-	}
-	if ( System.getProperties().containsKey( "sysProp" ) ) {
-	    System.out.println( "System has the key sysProp" );
-	} else {
-	    System.out.println( "System does not have the key sysProp" );
-	}
-	
+    private static ShelfLogger shelfLogger;
+    private static Logger logger;
+
+    public static void setIterations() {	
 	try {
 	    iterations = new Integer( System.getProperty( "iterations" ) );
 	} catch ( Exception e) {
@@ -36,19 +32,26 @@ public class CallableFutures {
 	}
     }
 
-    public static void main( String[] args ) {
-	
-	setIterations();
+    public static void main( String[] args ) throws InterruptedException {
+	logger = ShelfLogger.getInstance().getLogger();
 
+	setIterations();
+	String idString;
 	ExecutorService executor = Executors.newFixedThreadPool( NTHREDS );
 	List< Future< Long > > futureList = new ArrayList< Future< Long > >();
-	for ( int i = 0; i < 20000; i++ ) {
-	    Callable< Long > worker = new MyCallable();
+	for ( int i = 0; i < iterations; i++ ) {
+	    idString = UUID.randomUUID().toString();
+	    logger.info( "Starting a new MyCallable: " + i + ", " + idString  );
+	    Callable< Long > worker = new MyCallable(i, idString);
+	    Thread.sleep( 2 * 1000 );
+	    logger.info( "About to submit MyCallable: " + i + ", " + idString  );
 	    Future< Long > submit = executor.submit( worker );
+	    logger.info( "About to add to futureList MyCallable: " + i + ", " + idString  );
+	    logger.info( " ------ " );
 	    futureList.add( submit );
 	}
 	long sum = 0;
-	System.out.println( "The size of the list is: " + futureList.size() );
+	logger.info( "The size of the list is: " + futureList.size() );
 	
 	for ( Future< Long > future : futureList ) {
 	    try {
@@ -58,8 +61,8 @@ public class CallableFutures {
 	    } catch ( ExecutionException e ) {
 		e.printStackTrace();
 	    }
-	} // for ( Future< Long > future : futureList ) {
-	System.out.println( "The sum is: " + sum );
+	} // for ( Future< Long > future : futureList ) 
+	logger.info( "The sum is: " + sum );
 	executor.shutdown();
     } // end method main
 

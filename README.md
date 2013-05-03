@@ -13,6 +13,8 @@ gradle runJava -PmainClass="de.vogella.concurrency.callables.CallableFutures" -D
 
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
 
+Java API: http://docs.oracle.com/javase/7/docs/api/    
+
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
 assertEquals becomes mgu.equals  

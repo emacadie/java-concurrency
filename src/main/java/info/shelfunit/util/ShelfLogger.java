@@ -47,11 +47,6 @@ public class ShelfLogger {
         return logger;
     }
 
-    /*
-    public void setLogger( Logger logger ) {
-        this.logger = logger;
-    }
-    */
     private static class ShelfLoggerLazyHolder {
          private static final ShelfLogger something = new ShelfLogger();
     }
