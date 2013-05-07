@@ -29,10 +29,10 @@ public class CallableWorker implements Callable< Double > {
 	double sum = 0;
 	Thread.sleep( num * 1000 );
 	for ( double i = 0; i <= 100; i++ ) {
-	    sum += ( i + num );
+	    sum += ( i * num );
 	}
 	Thread.sleep( num * 1000 );
-	logger.info("Starting CallableWorker.call in " + num + ", " + idString);
+	logger.info("Ending CallableWorker.call in " + num + ", " + idString);
 	return sum;
     } // end method call
 

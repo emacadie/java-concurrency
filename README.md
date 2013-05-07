@@ -11,6 +11,11 @@ gradle runGroovy -PmainClass="org.lookup"
 To run with Java:       
 gradle runJava -PmainClass="de.vogella.concurrency.callables.CallableFutures" -Diterations=10    
 
+gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableRunner" -Diterations=10    
+
+gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
+
+
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
 
 Java API: http://docs.oracle.com/javase/7/docs/api/    

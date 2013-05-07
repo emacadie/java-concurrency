@@ -13,7 +13,7 @@ import info.shelfunit.util.ShelfLogger;
 import org.apache.log4j.Logger;
 
 
-public class ForwardCallableRunner {
+public class BackwardCallableRunner {
 
     private static final int NTHREDS = 10;
     private static int iterations;
@@ -37,7 +37,8 @@ public class ForwardCallableRunner {
 	String idString;
 	ExecutorService executor = Executors.newFixedThreadPool( NTHREDS );
 	List< Future< Double > > futureList = new ArrayList< Future< Double > >();
-	for ( int i = 0; i <= iterations; i++ ) {
+	
+	for ( int i = iterations; i > 0; i-- ) {
 	    idString = UUID.randomUUID().toString();
 	    logger.info( "Starting a new MyCallable: " + i + ", " + idString );
 	    Callable< Double > worker = new CallableWorker(i, idString);
