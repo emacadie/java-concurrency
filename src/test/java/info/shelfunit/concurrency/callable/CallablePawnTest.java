@@ -2,7 +2,6 @@ package info.shelfunit.concurrency.callable;
 
 import java.util.LinkedList;
 
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,7 +40,7 @@ public class CallablePawnTest {
      * Test of dropUser method, of class UserManagerBean.
      */
     @Test
-    public void testDropUser() {
+    public void testSomethingRandom() {
 	methodName = className + Thread.currentThread().getStackTrace()[ 1 ].getMethodName();
         System.out.println( "At test " + methodName );
         
@@ -53,6 +52,27 @@ public class CallablePawnTest {
         // fail( "The test case is a prototype." );
     } // end method testDropUser
 
+    @Test
+    public void testSizeOfList() {
+	methodName = className + Thread.currentThread().getStackTrace()[ 1 ].getMethodName();
+        System.out.println( "At test " + methodName );
+        
+        CallablePawn instance = new CallablePawn();
+	List< Double > cpList = instance.getTheList();
+	assertEquals( 10, cpList.size() );
+    }
+
+    @Test
+    public void testSumming() {
+	methodName = className + Thread.currentThread().getStackTrace()[ 1 ].getMethodName();
+        System.out.println( "At test " + methodName );
+        
+        CallablePawn instance = new CallablePawn();
+	instance.getTheSumGoingForward();
+	instance.getTheSumGoingBackward();
+	List< Double > cpList = instance.getTheList();
+	assertEquals( 10, cpList.size() );
+    }
 
 } // end class info.shelfunit.concurrency.callable.CallablePawn                                                                                       
 
