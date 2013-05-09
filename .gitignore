@@ -28,6 +28,7 @@ tree*txt
 build/classes/*
 build/dependency-cache/*
 build/libs/*
+build/resources/*
 build/reports/*
 build/reports/tests/*
 build/test-results/*
