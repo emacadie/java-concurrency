@@ -16,6 +16,11 @@ gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableR
 gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
 
 
+Code in package info.shelfunit.concurrency.venkatsbook.ch002 from Programming Concurrency on the JVM by Venkat Subramaniam  
+Venkat, chapter 2:   
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.SequentialNAV
+  
+
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
 
 Java API: http://docs.oracle.com/javase/7/docs/api/    
