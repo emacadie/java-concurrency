@@ -76,7 +76,9 @@ task runJava(type: JavaExec) {
      jvmArgs '-client'
      // We can pass arguments to the main() method
      // of gradle.sample.SampleApp.
-     args 'www.yahoo.com'
+     if ( rootProject.hasProperty( "mainArgs" ) ) {     
+     	args = [ mainArgs ]
+     } 
 }
 
 task runGroovy(type: JavaExec) {
@@ -97,7 +99,6 @@ task runGroovy(type: JavaExec) {
      jvmArgs '-client'
      // We can pass arguments to the main() method
      // of gradle.sample.SampleApp.
-     args 'www.yahoo.com'
 }
 
 
