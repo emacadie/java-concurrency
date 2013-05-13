@@ -22,11 +22,12 @@ public class CallableWorker implements Callable< Double > {
     }
  
     @Override
-	public Double call() throws Exception {
+    public Double call() throws Exception {
         logger.info("Starting CallableWorker.call in " + num + ", " + idString);
         this.hello();
         double sum = 0;
         Thread.sleep( num * 1000 );
+
         for ( double i = 0; i <= 100; i++ ) {
             sum += ( i * num );
         }
