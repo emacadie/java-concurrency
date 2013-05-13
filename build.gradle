@@ -73,11 +73,11 @@ task runJava(type: JavaExec) {
      systemProperty 'iterations', System.properties['iterations'] 
      // you can use this if nothing is set via command line
      // systemProperties = System.getProperties()
-     jvmArgs '-client'
+     jvmArgs '-server'
      // We can pass arguments to the main() method
      // of gradle.sample.SampleApp.
      if ( rootProject.hasProperty( "mainArgs" ) ) {     
-     	args = [ mainArgs ]
+     	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
      } 
 }
 
