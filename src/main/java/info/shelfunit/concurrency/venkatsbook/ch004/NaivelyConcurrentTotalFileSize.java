@@ -23,6 +23,7 @@ public class NaivelyConcurrentTotalFileSize {
 	long total = 0;
 	if ( children != null ) {
 	    final List< Future< Long > > partialTotalFutures = new ArrayList< Future< Long > >();
+
 	    for ( final File child : children ) {
 		partialTotalFutures.add(service.submit( new Callable< Long >() {
 		    public Long call() throws InterruptedException, ExecutionException, TimeoutException {
@@ -31,7 +32,6 @@ public class NaivelyConcurrentTotalFileSize {
 		} ) ); // add to the list
 	     } // for ( final File child : children ) {
 		    
-		     
 	    for ( final Future< Long > partialTotalFuture : partialTotalFutures ) {
 		total += partialTotalFuture.get( 100, TimeUnit.SECONDS );
 	    } // for ( final Future< Long > partialTotalFuture : partialTotalFutures ) {
@@ -42,10 +42,8 @@ public class NaivelyConcurrentTotalFileSize {
     private long getTotalSizeOfFile( final String fileName ) 
     throws InterruptedException, ExecutionException, TimeoutException {
 	final ExecutorService service = Executors.newFixedThreadPool( 100 );
-	try {
-	    return getTotalSizeOfFilesInDir( service, new File( fileName ) ); 
+	try { return getTotalSizeOfFilesInDir( service, new File( fileName ) ); 
 	} finally { service.shutdown(); }
-	
     } // end long getTotalSizeOfFile() {
 
     public static void main( final String[] args ) throws InterruptedException, ExecutionException, TimeoutException {
