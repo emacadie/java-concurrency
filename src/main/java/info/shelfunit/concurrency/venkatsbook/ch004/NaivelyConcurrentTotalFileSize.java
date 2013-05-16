@@ -34,13 +34,10 @@ public class NaivelyConcurrentTotalFileSize {
 		     
 	    for ( final Future< Long > partialTotalFuture : partialTotalFutures ) {
 		total += partialTotalFuture.get( 100, TimeUnit.SECONDS );
-	   
-
 	    } // for ( final Future< Long > partialTotalFuture : partialTotalFutures ) {
 	} // end if (children != null)
 	return total;
     } // end getTotalSizeOfFilesInDir
-
 
     private long getTotalSizeOfFile( final String fileName ) 
     throws InterruptedException, ExecutionException, TimeoutException {
@@ -53,10 +50,8 @@ public class NaivelyConcurrentTotalFileSize {
 
     public static void main( final String[] args ) throws InterruptedException, ExecutionException, TimeoutException {
 	final long start = System.nanoTime();
-	
 	final long total = new NaivelyConcurrentTotalFileSize().
 	    getTotalSizeOfFile( args[ 0 ] );
-	    
 	final long end = System.nanoTime();
 	System.out.println( "Total file size: " + total );
 	System.out.println( "Time taken: " + ( end - start )/1.0e9 );
