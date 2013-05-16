@@ -15,7 +15,7 @@ gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableR
 
 gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
 
-Venkat's book: up to page 47   
+Venkat's book: up to page 53   
 
 Code in package info.shelfunit.concurrency.venkatsbook.ch002 from Programming Concurrency on the JVM by Venkat Subramaniam  
 Venkat, chapter 2:   
@@ -24,6 +24,11 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.Concurre
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.ConcurrentCallableNAV    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.SequentialPrimeFinder -PmainArgs=10000000     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.ConcurrentPrimeFinder -PmainArgs="10000000 2 2"  
+
+Venkat, chapter 4:  
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.TotalFileSizeSequential  -PmainArgs="/home/ericm/github"  
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.NaivelyConcurrentTotalFileSize  -PmainArgs="/home/ericm/github"     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.ConcurrentTotalFileSize  -PmainArgs="/home/ericm/github"     
 
 
 
