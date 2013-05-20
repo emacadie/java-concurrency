@@ -32,6 +32,8 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.NaivelyC
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.ConcurrentTotalFileSize  -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.ConcurrentTotalFileSizeWLatch -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.ConcurrentTotalFileSizeWQueue -PmainArgs="/home/ericm/github"     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.FileSize -PmainArgs="/home/ericm/github"     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.FileSizeCaller -PmainArgs="/home/ericm/github"     
 
 
 
