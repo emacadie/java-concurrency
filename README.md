@@ -15,7 +15,7 @@ gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableR
 
 gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
 
-Venkat's book: up to page 69   
+Venkat's book: up to page 73   
 
 Code in package info.shelfunit.concurrency.venkatsbook.ch002 from Programming Concurrency on the JVM by Venkat Subramaniam  
 Venkat, chapter 2:   
@@ -35,6 +35,7 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.Concurre
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.FileSize -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.FileSizeCaller -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.AccessingMap     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.AccountRunner     
 
 
 
