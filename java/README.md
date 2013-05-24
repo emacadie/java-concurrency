@@ -37,6 +37,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.FileSize
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.AccessingMap     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch004.AccountRunner     
 
+gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="SynchronizedHolder 10000"      
+gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="LockHolder 10000"      
+gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="SingleLockHolder 10000"      
 
 
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
