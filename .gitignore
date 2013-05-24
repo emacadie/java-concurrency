@@ -23,18 +23,18 @@ tree*txt
 # for Maven projects
 *class
 *jar
-/target/*
+java/target/*
 # gradle build artifacts
-build/classes/*
-build/dependency-cache/*
-build/libs/*
-build/resources/*
-build/reports/*
-build/reports/tests/*
-build/test-results/*
-build/tmp/test/*
-build/tmp/*
-build/docs/*
+java/build/classes/*
+java/build/dependency-cache/*
+java/build/libs/*
+java/build/resources/*
+java/build/reports/*
+java/build/reports/tests/*
+java/build/test-results/*
+java/build/tmp/test/*
+java/build/tmp/*
+java/build/docs/*
 # build/*
 .gradle/*
 
