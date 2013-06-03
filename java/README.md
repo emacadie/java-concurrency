@@ -15,7 +15,7 @@ gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableR
 
 gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
 
-Venkat's book: up to page 89   
+
 
 Code in package info.shelfunit.concurrency.venkatsbook.ch002 from Programming Concurrency on the JVM by Venkat Subramaniam  
 Venkat, chapter 2:   
@@ -41,18 +41,19 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunne
 gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="LockHolder 10000"      
 gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="SingleLockHolder 10000"      
 
+Venkat, chapter 7:   
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.Transfer    
 
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
 
 Java API: http://docs.oracle.com/javase/7/docs/api/    
 
+Clojure Javadoc: http://www.jarvana.com/jarvana/view/org/clojure/clojure/1.4.0-alpha4/clojure-1.4.0-alpha4-javadoc.jar!/index.html   
+
+Also look into this: https://github.com/krukow/clj-ds  
+
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
-assertEquals becomes mgu.equals  
-assertNull(XXX) becomes mgu.equals(null, XXX)   
-assertTrue becomes mga.assertTrue
-assertFalse(x == y) becomes mga.that( x != y)    
-assertFalse(XX.YY) becomes mga.that(!XX.YY)   
-assertNotSame(m_h, h2) becomes !mgu.equals(m_h, h2)    
-assertSame(x, y) becomes mgu.equals(x, y)    
+
 
