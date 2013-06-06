@@ -5,7 +5,6 @@ import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
 import akka.actor.UntypedActorFactory;
-// import src.main.java.info.shelfunit.concurrency.venkatsbook.ch008.HollywoodActorWithParams;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 
@@ -27,6 +26,7 @@ public class UseHollywoodActorWithParams {
 	try {
 	    
 	    final ActorRef tomHanks = getNewHollywoodActorWithParams( system, "Tom Hanks", "tom-hanks");
+
 	    tomHanks.tell("James Lovell", tomHanks);
 	    Thread.sleep(1000);
 	    tomHanks.tell( new StringBuilder("Politics"), tomHanks );
