@@ -44,6 +44,17 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunne
 Venkat, chapter 7:   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.Transfer    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.STransfer    
+
+Venkat, chapter 8:  
+gradle runJava -PmainClass=src.main.java.info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActor     
+gradle runJava -PmainClass=src.main.java.info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActorWithParams     
+
+
+/home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
+      scottBakula.tell("Captain Archer");     
+It would have been nice to see that in the Javadoc.    
+
 
 Writing tests in Groovy: http://hamletdarcy.blogspot.com/2008/04/testing-java-from-groovy-2.html   
 
@@ -52,6 +63,8 @@ Java API: http://docs.oracle.com/javase/7/docs/api/
 Clojure Javadoc: http://www.jarvana.com/jarvana/view/org/clojure/clojure/1.4.0-alpha4/clojure-1.4.0-alpha4-javadoc.jar!/index.html   
 
 Also look into this: https://github.com/krukow/clj-ds  
+
+Akka Javadoc: http://doc.akka.io/japi/akka/2.1.4/   
 
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
