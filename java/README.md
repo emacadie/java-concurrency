@@ -66,6 +66,10 @@ Also look into this: https://github.com/krukow/clj-ds
 
 Akka Javadoc: http://doc.akka.io/japi/akka/2.1.4/   
 
+Akka is now using ScalaSTM for software transactional memory. See example here:    
+http://doc.akka.io/docs/akka/2.0.4/project/migration-guide-1.3.x-2.0.x.html    
+Home of ScalaSTM: http://nbronson.github.io/scala-stm/index.html     
+
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
 
