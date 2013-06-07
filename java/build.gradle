@@ -39,9 +39,13 @@ allprojects {
     compile 'org.codehaus.groovy:groovy-all:2.1.0'
     compile 'org.clojure:clojure:1.5.1'
 
+    // for Akka
     compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
     // compile 'com.typesafe.akka:akka-actor:2.10.1'
     // compile 'org.scala-lang:scala-library:2.10.1'
+
+    // ScalaSTM, since that is what Akka uses for STM
+    compile 'org.scala-stm:scala-stm_2.10:0.7'
   }
 
   tasks.withType(Compile) { Compile compile ->
