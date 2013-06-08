@@ -1,9 +1,5 @@
 package info.shelfunit.concurrency.venkatsbook.ch006;
 
-// import scala.concurrent.stm.Ref;
-// import scala.concurrent.stm.Ref.View;
-// import scala.concurrent.stm.japi.STM;
-
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
@@ -11,12 +7,11 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
-// import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 public class UseSeparateEnergySource {
-    private static final EnergySeparateSource energySource = EnergySeparateSource.create();
+    private static final SeparateEnergySource energySource = SeparateEnergySource.create();
 
     public static void main( final String[] args ) 
     throws InterruptedException, ExecutionException {
@@ -40,21 +35,21 @@ public class UseSeparateEnergySource {
 	System.out.println("Energy available at end: " + energySource.getUnitsAvailable());
 	System.out.println( "Usage: " + energySource.getUsageCount() );
 
-	energySource.stopEnergySource();
-
+	energySource.stopSeparateEnergySource();
 	
 	service.shutdown();
 	System.out.println( "Just called service.shutdown" );
 
 	energySource.shutdownScheduledExecutorService();
+	/*
 	System.out.println( "Just called energySource.shutdownScheduledExecutorService()" );
-
 	Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
 	Thread[] threadArray = threadSet.toArray(new Thread[threadSet.size()]);
 	System.out.println( "threadArray.length: " + threadArray.length );
 	for ( int x = 0; x < threadArray.length; x++) {
 	    System.out.println( "Thread name: " + threadArray[x].getName() );
 	}
+*/
     } // end main
 
 } // end UseEnergySource

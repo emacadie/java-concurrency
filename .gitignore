@@ -16,6 +16,7 @@
 
 # Ignore emacs backup files
 *~
+[#]*
 env_vars
 notes.*txt
 tree*txt

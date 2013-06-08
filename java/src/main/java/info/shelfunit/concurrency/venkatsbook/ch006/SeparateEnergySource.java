@@ -4,7 +4,6 @@ import scala.concurrent.stm.Ref;
 import scala.concurrent.stm.Ref.View;
 import scala.concurrent.stm.japi.STM;
 
-
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -18,8 +17,8 @@ public class SeparateEnergySource {
     // without calling .ref() at the end, you get a View, which does not
     // require a transaction. But isn't requiring a transaction the whole point?
     // at least, I think that is what it says
-    final View< Long > level = STM.newRef( new Long(MAXLEVEL) ); // new Ref< Long >( MAXLEVEL );
-    final View< Long > usageCount = STM.newRef( new Long( 0L ) ); // .ref();
+    final View< Long > level = STM.newRef( new Long(MAXLEVEL) ); 
+    final View< Long > usageCount = STM.newRef( new Long( 0L ) ); 
     final View< Boolean > keepRunning = STM.newRef( new Boolean(true) );
     private static final ScheduledExecutorService replenishTimer = Executors.newScheduledThreadPool( 10 );
 
@@ -54,31 +53,14 @@ public class SeparateEnergySource {
     public long getUsageCount() {  return usageCount.get(); }
 
     public boolean useEnergy(final long units) {
-	Boolean result = STM.atomic(new Callable< Boolean >() {
-	    public Boolean call() {
-
-		long currentLevel = level.get();
-		if (units > 0 && currentLevel >= units) {
-		    level.swap(currentLevel - units);
-		    usageCount.swap(usageCount.get() + 1);
-		    return true;
-		} else {
-		    return false;
-		}
-	    } // end call
-	});
+	Boolean result = STM.atomic(
+	    new CallableUseEnergy(units, level, usageCount,  MAXLEVEL)
+	);
        return result;
     } // end useEnergy
 
     private void replenish() {
-	STM.atomic(new Runnable() {
-	    public void run() {
-		long currentLevel = level.get();
-		if ( currentLevel < MAXLEVEL ) {
-		    level.swap(currentLevel + 1);
-		}
-	    } // end run
-	});
+	STM.atomic( new ReplenishRunnable(MAXLEVEL, level) );
     } // end replenish
 
 } // end SeparateEnergySource
