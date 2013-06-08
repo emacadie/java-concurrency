@@ -41,6 +41,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunne
 gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="LockHolder 10000"      
 gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="SingleLockHolder 10000"      
 
+Venkat, chapter 6:   
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.UseEnergySource    
+
 Venkat, chapter 7:   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.Transfer    

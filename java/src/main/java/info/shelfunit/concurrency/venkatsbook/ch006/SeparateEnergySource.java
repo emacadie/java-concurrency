@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
-public class EnergySource {
+public class SeparateEnergySource {
     private final long MAXLEVEL = 100;
     // if you call STM.newRef(xxx).ref(), you get a Ref
     // without calling .ref() at the end, you get a View, which does not
@@ -23,7 +23,7 @@ public class EnergySource {
     final View< Boolean > keepRunning = STM.newRef( new Boolean(true) );
     private static final ScheduledExecutorService replenishTimer = Executors.newScheduledThreadPool( 10 );
 
-    private EnergySource() {}
+    private SeparateEnergySource() {}
 
     public void shutdownScheduledExecutorService() {
 	replenishTimer.shutdown();
@@ -41,13 +41,13 @@ public class EnergySource {
         );
     } // end init
 
-    public static EnergySource create() {
-	final EnergySource energySource = new EnergySource();
+    public static SeparateEnergySource create() {
+	final SeparateEnergySource energySource = new SeparateEnergySource();
 	energySource.init();
 	return energySource;
     }
 
-    public void stopEnergySource() { keepRunning.swap(false); }
+    public void stopSeparateEnergySource() { keepRunning.swap(false); }
 
     public long getUnitsAvailable() { return level.get(); }
     
@@ -81,4 +81,4 @@ public class EnergySource {
 	});
     } // end replenish
 
-} // end EnergySource
+} // end SeparateEnergySource
