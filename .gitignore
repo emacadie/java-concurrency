@@ -24,6 +24,7 @@ tree*txt
 # for Maven projects
 *class
 *jar
+maven/target/*
 java/target/*
 # gradle build artifacts
 java/build/classes/*

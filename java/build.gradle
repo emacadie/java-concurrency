@@ -5,12 +5,18 @@ apply plugin: 'groovy'
 
 repositories {
   mavenCentral()
-  // mavenRepo(urls: 'http://repo.typesafe.com/typesafe/releases')
+
 /*
   maven {
     // Name is optional. If not set url property is used	
     name = 'Main Maven repository'
     url = 'http://repo.typesafe.com/typesafe/releases'
+  }
+*/
+/*
+  maven {
+      name "codehaus" 
+      url =  "http://dist.codehaus.org/"
   }
 */
 }
@@ -20,7 +26,7 @@ allprojects {
     testCompile 'junit:junit:4.10'
     testCompile 'org.mockito:mockito-all:[1.8.5,)'
     // From Maven, it's GroupId:ArtifactId:Version 
-   testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
 
     compile 'commons-codec:commons-codec:1.6'
     // compile 'io.netty:netty:3.5.7.Final'
@@ -46,6 +52,9 @@ allprojects {
 
     // ScalaSTM, since that is what Akka uses for STM
     compile 'org.scala-stm:scala-stm_2.10:0.7'
+
+    // Multiverse
+    compile 'org.multiverse:multiverse-core:0.7.0'
   }
 
   tasks.withType(Compile) { Compile compile ->

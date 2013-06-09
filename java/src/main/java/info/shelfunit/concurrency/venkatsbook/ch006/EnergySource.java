@@ -1,5 +1,7 @@
 package info.shelfunit.concurrency.venkatsbook.ch006;
 
+import org.multiverse.api.references.*;
+
 import scala.concurrent.stm.Ref;
 import scala.concurrent.stm.Ref.View;
 import scala.concurrent.stm.japi.STM;
@@ -17,7 +19,7 @@ public class EnergySource {
     // without calling .ref() at the end, you get a View, which does not
     // require a transaction. But isn't requiring a transaction the whole point?
     // at least, I think that is what it says
-    final Ref< Long > level = STM.newRef( new Long(MAXLEVEL) ); 
+    final View< Long > level = STM.newRef( new Long(MAXLEVEL) ); 
     final View< Long > usageCount = STM.newRef( new Long( 0L ) ); 
     final View< Boolean > keepRunning = STM.newRef( new Boolean(true) );
     private static final ScheduledExecutorService replenishTimer = Executors.newScheduledThreadPool( 10 );
