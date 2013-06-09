@@ -1,4 +1,4 @@
-package info.shelfunit.concurrency.venkatsbook.ch006;
+package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
 import java.util.List;
 import java.util.ArrayList;

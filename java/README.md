@@ -42,9 +42,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunne
 gradle runJava -PmainClass=info.shelfunit.concurrency.comparison.ComparisonRunner -PmainArgs="SingleLockHolder 10000"      
 
 Venkat, chapter 6:   
-gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.UseEnergySource    
-gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.UseSeparateEnergySource    
-gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.UseMultiverseEnergySource    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseEnergySource    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseSeparateEnergySource    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseMultiverseEnergySource    
 
 Venkat, chapter 7:   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    
