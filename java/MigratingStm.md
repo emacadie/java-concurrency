@@ -1,0 +1,19 @@
+import akka.stm.Ref;  
+import akka.stm.Atomic;  
+becomes   
+import scala.concurrent.stm.Ref;  
+import scala.concurrent.stm.Ref.View;    
+import scala.concurrent.stm.japi.STM;   
+
+final private Ref<Integer> balance = new Ref<Integer>();   
+becomes  
+final View< Integer > balance = STM.newRef( new Integer(0) );  
+
+public Account(int initialBalance) { balance.swap(initialBalance); }  
+becomes   
+public Account(int initialBalance) { balance.swap(initialBalance); }   
+In ScalaSTM, I think you can use set and swap interchangably for the most part. The only difference is swap() will return the old value.   
+
+
+public int getBalance() { return balance.get(); }   
+is also the same.   

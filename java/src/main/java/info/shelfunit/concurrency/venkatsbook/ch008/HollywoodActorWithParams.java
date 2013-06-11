@@ -13,6 +13,7 @@ public class HollywoodActorWithParams extends UntypedActor {
     }
 
     public void onReceive( final Object role ) {
+	System.out.print( "role is a " + role.getClass().getName() + "; " );
 	if ( role instanceof String ) {
 	    System.out.println( "Playing " + role + " from Thread " + Thread.currentThread().getName() );
 	} else {

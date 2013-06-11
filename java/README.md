@@ -15,8 +15,6 @@ gradle runJava -PmainClass="info.shelfunit.concurrency.callable.ForwardCallableR
 
 gradle runJava -PmainClass="info.shelfunit.concurrency.callable.BackwardCallableRunner" -Diterations=10    
 
-
-
 Code in package info.shelfunit.concurrency.venkatsbook.ch002 from Programming Concurrency on the JVM by Venkat Subramaniam  
 Venkat, chapter 2:   
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch002.SequentialNAV   
@@ -45,6 +43,7 @@ Venkat, chapter 6:
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseEnergySource    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseSeparateEnergySource    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseMultiverseEnergySource    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.nested.AccountService   
 
 Venkat, chapter 7:   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    
@@ -74,6 +73,7 @@ Akka Javadoc: http://doc.akka.io/japi/akka/2.1.4/
 Akka is now using ScalaSTM for software transactional memory. See example here:    
 http://doc.akka.io/docs/akka/2.0.4/project/migration-guide-1.3.x-2.0.x.html    
 Home of ScalaSTM: http://nbronson.github.io/scala-stm/index.html     
+Home of Multiverse: http://multiverse.codehaus.org/60second.html    
 
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 

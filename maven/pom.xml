@@ -20,6 +20,14 @@
              <name>Codehaus Release Repo</name>
              <url>http://dist.codehaus.org/</url>
     </repository>
+
+      <repository>
+    <id>oss.sonatype.org.snapshots</id>
+    <name>OSS Sonatype Snapshot Repository</name>
+    <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+    <snapshots/>
+      </repository>
+
   </repositories>
 
   <dependencies>
@@ -28,6 +36,12 @@
              <artifactId>multiverse-core</artifactId>
              <version>0.7.0</version>
          </dependency>
+
+	 <dependency>
+    <groupId>org.scala-stm</groupId>
+    <artifactId>scala-stm_2.10</artifactId>
+    <version>0.8-SNAPSHOT</version>
+	 </dependency>
 
   </dependencies>
 
