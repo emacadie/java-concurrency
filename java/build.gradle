@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'groovy'
+// do not run this every single time
 apply plugin: 'checkstyle'
 
 // apply plugin: 'scala' // for Akka, not needed
@@ -144,5 +145,18 @@ task(console, dependsOn: 'classes', type: JavaExec) {
 }
 
 
+checkstyle {
+  // configProperties = [translation.severity: 'warn'] // [tabWidth: 10, translation.severity: 'warn']
+  // Map<String, Object> configProperties = new HashMap<String, Object>()
+// configProperties.put('translation.severity', 'warn')
+// apply(configProperties)
+   // configProperties {
+     // translation.serverity = 'warning'
+   // }
+
+   // def configProperties = [ "translation.severity":"warning"] // , likes:"cheese", id:1234]
+   configProperties = new HashMap<String, Object>()
+   configProperties.put('translation.severity', 'warning')
+}
 
 // 

@@ -1,7 +1,7 @@
 package de.vogella.concurrency.callables;
 
 import java.util.concurrent.Callable;
-import java.util.UUID;
+// import java.util.UUID;
 import info.shelfunit.util.ShelfLogger;
 import org.apache.log4j.Logger;
 
