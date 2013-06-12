@@ -17,3 +17,28 @@ In ScalaSTM, I think you can use set and swap interchangably for the most part. 
 
 public int getBalance() { return balance.get(); }   
 is also the same.   
+
+A transaction:   
+public void transfer(
+    final Account from, final Account to, final int amount) {
+        new Atomic<Boolean>() {
+            public Boolean atomically() {
+                to.deposit(amount);
+                from.withdraw(amount);
+                return true;
+            }
+        }.execute();
+    }
+);
+Becomes  
+public void transfer(final Account from, final Account to, final int amount) {
+     STM.atomic( new Runnable() {
+         public void run() {
+	     to.deposit(amount);
+      	     from.withdraw( amount);
+          } // end run
+    });
+} // end transfer
+
+
+B
