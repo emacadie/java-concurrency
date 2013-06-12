@@ -1,6 +1,5 @@
 package info.shelfunit.concurrency.venkatsbook.ch004;
 
-import java.io.File;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.UUID;

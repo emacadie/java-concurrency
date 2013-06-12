@@ -1,14 +1,8 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
-import scala.concurrent.stm.Ref;
 import scala.concurrent.stm.Ref.View;
-import scala.concurrent.stm.japi.STM;
-
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 

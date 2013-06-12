@@ -3,7 +3,6 @@ package src.main.java.info.shelfunit.concurrency.venkatsbook.ch008;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
-import akka.actor.UntypedActor;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 

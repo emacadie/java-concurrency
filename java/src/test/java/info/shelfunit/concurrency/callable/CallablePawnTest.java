@@ -1,7 +1,5 @@
 package info.shelfunit.concurrency.callable;
 
-import java.util.LinkedList;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

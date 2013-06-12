@@ -1,10 +1,8 @@
 package de.vogella.concurrency.callables;
 
 import java.util.concurrent.Callable;
-// import java.util.UUID;
 import info.shelfunit.util.ShelfLogger;
 import org.apache.log4j.Logger;
-
 
 public class MyCallable implements Callable< Long > {
 
@@ -35,6 +33,5 @@ public class MyCallable implements Callable< Long > {
     private void hello() {
 	logger.info("in MyCallable.hello in " + num + ", " + idString);
     }
-
 
 } // end class de.vogella.concurrency.callables.MyCallable

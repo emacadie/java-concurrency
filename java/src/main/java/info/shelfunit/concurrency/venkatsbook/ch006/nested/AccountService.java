@@ -1,9 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.nested;
 
-import scala.concurrent.stm.Ref;
-import scala.concurrent.stm.Ref.View;
 import scala.concurrent.stm.japi.STM;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -26,7 +23,6 @@ public class AccountService {
 	});
     } // end transfer
 
-
     public void transferAndPrintBalance(final Account from, final Account to, final int amount) {
 	boolean result = true;
 	System.out.println("\n----------------------------\n");
@@ -47,7 +43,6 @@ public class AccountService {
 	
     } // end transferAndPrintBalance() 
 
-
     public static void main( final String[] args ) throws Exception {
 	final Account account1 = new Account(2000);
 	final Account account2 = new Account(100);
@@ -61,7 +56,6 @@ public class AccountService {
 	    } // end run
 	});
 	service.shutdown();
-
 
 	AccountService as = new AccountService();
 	as.transferAndPrintBalance(account1, account2, 500);

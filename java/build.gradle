@@ -155,8 +155,14 @@ checkstyle {
    // }
 
    // def configProperties = [ "translation.severity":"warning"] // , likes:"cheese", id:1234]
-   configProperties = new HashMap<String, Object>()
+   // this works:
+   // configProperties = [ "translation.severity":"warning"] // , likes:"cheese", id:1234]
+   // these two together work:
+   // configProperties = new HashMap<String, Object>()
+   // configProperties.put('translation.severity', 'warning')
+   // this also works
    configProperties.put('translation.severity', 'warning')
+   println("configProperties is a " + configProperties.getClass().getName())
 }
 
 // 

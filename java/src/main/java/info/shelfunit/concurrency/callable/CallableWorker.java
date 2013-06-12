@@ -1,9 +1,5 @@
 package info.shelfunit.concurrency.callable;
  
-import java.util.List;
-import java.util.LinkedList;
-import java.util.UUID;
- 
 import java.util.concurrent.Callable;
 import info.shelfunit.util.ShelfLogger;
 import org.apache.log4j.Logger;

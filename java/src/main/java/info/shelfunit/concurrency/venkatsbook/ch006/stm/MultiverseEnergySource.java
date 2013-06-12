@@ -1,13 +1,10 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
 import org.multiverse.api.references.*;
-// import static org.multiverse.api.StmUtils.*;
 import org.multiverse.api.*;
 import org.multiverse.stms.gamma.transactions.fat.*;
-import org.multiverse.stms.gamma.GammaStm;
 import org.multiverse.stms.gamma.transactionalobjects.*;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;

@@ -2,7 +2,6 @@ package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;

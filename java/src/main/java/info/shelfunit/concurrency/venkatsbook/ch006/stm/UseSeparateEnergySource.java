@@ -2,7 +2,6 @@ package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -41,15 +40,7 @@ public class UseSeparateEnergySource {
 	System.out.println( "Just called service.shutdown" );
 
 	energySource.shutdownScheduledExecutorService();
-	/*
-	System.out.println( "Just called energySource.shutdownScheduledExecutorService()" );
-	Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-	Thread[] threadArray = threadSet.toArray(new Thread[threadSet.size()]);
-	System.out.println( "threadArray.length: " + threadArray.length );
-	for ( int x = 0; x < threadArray.length; x++) {
-	    System.out.println( "Thread name: " + threadArray[x].getName() );
-	}
-*/
+
     } // end main
 
 } // end UseEnergySource

@@ -1,9 +1,5 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.stm;
 
-// import scala.concurrent.stm.Ref;
-// import scala.concurrent.stm.Ref.View;
-// import scala.concurrent.stm.japi.STM;
-
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
@@ -11,7 +7,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
-// import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
@@ -42,7 +37,6 @@ public class UseEnergySource {
 
 	energySource.stopEnergySource();
 
-	
 	service.shutdown();
 	System.out.println( "Just called service.shutdown" );
 

@@ -1,6 +1,5 @@
 package info.shelfunit.concurrency.venkatsbook.ch007;
 
-import clojure.lang.LockingTransaction;
 import java.util.concurrent.Callable;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam

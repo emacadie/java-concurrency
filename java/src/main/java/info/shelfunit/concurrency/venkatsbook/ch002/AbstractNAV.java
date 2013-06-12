@@ -3,7 +3,6 @@ package info.shelfunit.concurrency.venkatsbook.ch002;
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

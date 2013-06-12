@@ -3,8 +3,6 @@ package info.shelfunit.concurrency.callable;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.UUID;
-import java.util.ListIterator;
-
 
 public class CallablePawn {
 
@@ -38,7 +36,6 @@ public class CallablePawn {
 	System.out.println( "From getTheSumGoingForward(), the total is: " + total );
     }
 
-
     public void getTheSumGoingBackward() {
 	total = 0;
 	for ( double q = 10; q > 0; q-- ) {
@@ -58,8 +55,6 @@ public class CallablePawn {
 
     public static void main( String args[] ) {
 	CallablePawn cPawn = new CallablePawn();
-	
-
     } // end method main
 
 } // end class info.shelfunit.concurrency.callable.CallablePawn
