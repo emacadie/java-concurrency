@@ -1,27 +1,30 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.nested;
 
-import scala.concurrent.stm.Ref.View;
-import scala.concurrent.stm.japi.STM;
+import org.multiverse.api.references.*;
+import org.multiverse.api.*;
+
 import java.util.concurrent.Callable;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 public class MultiverseAccount {
     // final private Ref< Integer > balance = new Ref< Integer >();
-    final View< Integer > balance = STM.newRef( new Integer(0) ); 
+    final TxnInteger  balance; // = StmUtils.newTxnInteger( new Integer(0) ); 
 
     public MultiverseAccount(int initialBalance) {
-	balance.swap(initialBalance);
+	// new Runnable() { public void run() { balance.set(initialBalance); } };
+	this.balance = StmUtils.newTxnInteger( new Integer(initialBalance) ); 
     }
 
-    public int getBalance() { return balance.get(); }
+    public int getBalance() { return balance.atomicGet(); }
 
     public void deposit( final int amount ) {
-	STM.atomic( new Callable< Boolean >() {
+	StmUtils.atomic( new Callable< Boolean >() {
 	    public Boolean call() {
 		System.out.println( "Deposit: " + amount );
 		if (amount > 0) {
-		    balance.swap( balance.get() + amount );
+		    int currentBalance = balance.get(); 
+		    balance.set( currentBalance + amount );
 		    return true;
 		}
 		// we use a Callable instead of Runnable because
@@ -33,11 +36,11 @@ public class MultiverseAccount {
     } // end deposit
 
     public void withdraw(final int amount) {
-	STM.atomic( new Callable< Boolean >() {
+	StmUtils.atomic( new Callable< Boolean >() {
 	    public Boolean call() {
 		int currentBalance = balance.get();
 		if (amount > 0 && currentBalance >= amount) {
-		    balance.swap( currentBalance - amount );
+		    balance.set( currentBalance - amount );
 		    return true;
 		}
 		throw new AccountOperationFailedException();
@@ -45,4 +48,4 @@ public class MultiverseAccount {
 	});
     } // end withdraw
 
-} // end class Account
+} // end class MultiverseAccount

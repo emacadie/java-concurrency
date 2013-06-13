@@ -44,6 +44,8 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseE
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseSeparateEnergySource    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.stm.UseMultiverseEnergySource    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.nested.AccountService   
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.nested.MultiverseAccountService   
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch006.events.UseCounter   
 
 Venkat, chapter 7:   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.GroovyAccountRunner    

@@ -40,5 +40,10 @@ public void transfer(final Account from, final Account to, final int amount) {
     });
 } // end transfer
 
-
+In Multiverse:   
+How to set:   
+new Runnable() { public void run() { balance.set(initialBalance); } };    
+how to get:  
+You can just call atomicGet  
+If you are in StmUtils.atomic(), you can use plain old get   
 B
