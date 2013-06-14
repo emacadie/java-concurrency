@@ -2,10 +2,10 @@ package info.shelfunit.concurrency.venkatsbook.ch006.events;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
-public class UseCounter {
+public class UseMultiverseCounter {
 
     public static void main(final String[] args) {
-	Counter counter = new Counter();
+	MultiverseCounter counter = new MultiverseCounter();
 	System.out.println("About to call decrement");
 	counter.decrement();
 
@@ -19,4 +19,4 @@ public class UseCounter {
 
     } // end main
     
-} // end class UseCounter
+} // end class UseMultiverseCounter

@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-
 public class ComparisonRunner {
 
     private String fString;
@@ -27,8 +26,6 @@ public class ComparisonRunner {
 	iterations = new Integer( i ).intValue();
     }
     public int getIterations( ) { return iterations; }
-
-
 
     public ComparisonRunner() {
 	fString = UUID.randomUUID().toString();
@@ -63,7 +60,6 @@ public class ComparisonRunner {
 	final long end = System.nanoTime();
 	System.out.println( "Time taken for " + iterations + " SynchronizedHolder: " + (end - start)/1.0e9 );
     } // end runSynchronizedHolder
-
 
     private void runLockHolder() throws Exception {
 	System.out.println( "About to run runLockHolder()" );
@@ -124,5 +120,4 @@ public class ComparisonRunner {
 	crun.runTheClass();
     } // end method main
 
-    // LockHolder.java  SynchronizedHolder.java
 } // info.shelfunit.concurrency.comparison.ComparisonRunner

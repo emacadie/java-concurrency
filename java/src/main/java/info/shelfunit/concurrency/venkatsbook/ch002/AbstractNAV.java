@@ -14,7 +14,6 @@ import java.io.InputStreamReader;
 
 public abstract class AbstractNAV {
     public static Map< String, Integer > readTickers() throws IOException {
-	// final BufferedReader reader = new BufferedReader( new FileReader( "/stocks.txt" ) );
 	String hh = "hh";
 	URL theURL = hh.getClass().getResource( "/stocks.txt" );
 	final BufferedReader reader = new BufferedReader( new InputStreamReader( theURL.openStream() ) );
