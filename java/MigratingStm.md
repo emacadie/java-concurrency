@@ -46,4 +46,5 @@ new Runnable() { public void run() { balance.set(initialBalance); } };
 how to get:  
 You can just call atomicGet  
 If you are in StmUtils.atomic(), you can use plain old get   
+But sometimes you have to do a bit more: 
 B
