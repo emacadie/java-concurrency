@@ -27,8 +27,10 @@ public class Portfolio {
 		try { Thread.sleep(1000); } catch( InterruptedException ex ){ }
 		if ( totalBalance - amount >= 1000 ) {
 		    if ( fromChecking ) {
+			System.out.println("Taking from checking");
 			checkingBalance.swap( checkingBalance.get() - amount );
 		    } else {
+			System.out.println("Taking from savings");
 			savingsBalance.swap( savingsBalance.get() - amount );
 		    } // if ( fromChecking ) 
 		} else {
