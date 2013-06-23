@@ -1,4 +1,4 @@
-package src.main.java.info.shelfunit.concurrency.venkatsbook.ch008;
+package info.shelfunit.concurrency.venkatsbook.ch008;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;

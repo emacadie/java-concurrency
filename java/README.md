@@ -57,8 +57,10 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.Transfer
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch007.STransfer    
 
 Venkat, chapter 8:  
-gradle runJava -PmainClass=src.main.java.info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActor     
-gradle runJava -PmainClass=src.main.java.info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActorWithParams     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActor     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActorWithParams     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller002     
 
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    

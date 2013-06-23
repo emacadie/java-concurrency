@@ -1,4 +1,4 @@
-package src.main.java.info.shelfunit.concurrency.venkatsbook.ch008;
+package info.shelfunit.concurrency.venkatsbook.ch008;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -13,9 +13,9 @@ public class UseHollywoodActor {
 	final ActorRef scottBakula = system.actorOf(new Props(HollywoodActor.class), "NX-01");
 
 	scottBakula.tell("Sam Beckett", scottBakula);
-	Thread.sleep(1000);
+	// Thread.sleep(1000);
 	scottBakula.tell( "Captain Archer", scottBakula );
-	Thread.sleep(1000);
+	// Thread.sleep(1000);
 	scottBakula.tell("That's ADMIRAL Archer to you, pal", scottBakula);
 	system.shutdown();
     } // end method main
