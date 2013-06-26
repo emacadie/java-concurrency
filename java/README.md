@@ -61,7 +61,7 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHolly
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActorWithParams     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller002     
-
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100"      
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     

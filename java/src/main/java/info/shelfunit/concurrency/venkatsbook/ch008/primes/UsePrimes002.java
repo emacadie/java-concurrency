@@ -4,15 +4,16 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-// import info.shelfunit.concurrency.venkatsbook.ch008.PrintResult;
+import info.shelfunit.concurrency.venkatsbook.ch008.PrintResult;
 
 // More imports!
 import akka.pattern.Patterns;
 import scala.concurrent.Await;
 import scala.concurrent.Future;
-
+// import akka.dispatch.Futures;
+// import scala.concurrent.duration.Duration;
 import akka.util.Timeout;
-
+// import java.util.concurrent.TimeUnit;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.UUID;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 
-public class UsePrimes {
+public class UsePrimes002 {
 
     public static void main( final String[] args ) throws InterruptedException {
 	if ( args.length < 2 ) {
@@ -48,20 +49,19 @@ public class UsePrimes {
 	    final ActorRef primeFinder = system.actorOf(new Props(Primes.class), UUID.randomUUID().toString());
 	    results.add( Patterns.ask(primeFinder, bounds, (30 * 1000) ) );
 	} // for ( int index = 0; index < numberOfParts; index++ ) 
-
 	int count = 0;
 	for (Future<?> result : results) {
-
+	    // count += ( Integer ) result.await().result().get(); 
 	    try {
-		count +=  ( Integer )  Await.result(result, timeout.duration() );
+		// I cannot get this one to work right now
+		count += (Integer) result.onSuccess(new PrintResult< Integer >(), system.dispatcher());
 	    } catch ( Exception e ) {
 		System.out.println( "Exception in for loop" );
 		e.printStackTrace();
 	    }
-
 	}
 	system.shutdown();
 	return count;
     } // countPrimes
 
-} // end UsePrimes
+} // end UsePrimes002 - line 104
