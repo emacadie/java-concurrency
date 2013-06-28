@@ -62,6 +62,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHolly
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller002     
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100"      
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes002 -PmainArgs="10000000 100"      
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100"      
+That should give  664579
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
@@ -82,6 +85,7 @@ Akka is now using ScalaSTM for software transactional memory. See example here:
 http://doc.akka.io/docs/akka/2.0.4/project/migration-guide-1.3.x-2.0.x.html    
 Home of ScalaSTM: http://nbronson.github.io/scala-stm/index.html     
 Home of Multiverse: http://multiverse.codehaus.org/60second.html    
+http://www.scala-lang.org/archives/downloads/distrib/files/nightly/docs/library/index.html#scala.concurrent.Future    
 
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
