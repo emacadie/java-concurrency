@@ -3,7 +3,6 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 import akka.actor.ActorRef;
 import akka.actor.UntypedActor;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +21,15 @@ public class SizeCollector extends UntypedActor {
     } // sendAFileToProcess
 
     public void onReceive( final Object message ) {
+	if ( message instanceof RequestAFile ) {
+	    idleFileProcessors.add( getSender() );
+	    sendAFileToProcess();
+	}
+	if ( message instanceof FileToProcess ) {
+	    toProcessFileNames.add( ( ( FileToProcess ) message ).fileName );
+	    pendingNumberOfFilesToVisit += 1;
+	    sendAFileToProcess();
+	}
     } // onReceive
     
 } // end SizeCollector

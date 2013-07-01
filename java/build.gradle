@@ -58,6 +58,9 @@ allprojects {
 
     // Multiverse
     compile 'org.multiverse:multiverse-core:0.7.0'
+    
+    // Guava
+    compile 'com.google.guava:guava:14.0.1'
   }
 
   tasks.withType(Compile) { Compile compile ->
