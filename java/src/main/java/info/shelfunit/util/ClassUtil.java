@@ -7,33 +7,38 @@ import java.util.LinkedHashSet;
 
 public class ClassUtil {
 
-    private final Object o;
+    private final Object o_1;
     private Set< String > interfaces;
     private Set< String > ancestors;
     
-    private void setInterfaces() {
-	interfaces = new LinkedHashSet< String >();
-	Class ci[] = o.getClass().getInterfaces();
-	System.out.println( o.getClass().getName() + " implements " + 
+    private void setInterfaces( Class c_1 ) {
+	
+	Class ci[] = c_1.getInterfaces();
+	System.out.println( c_1.getName() + " implements " + 
 	    ci.length + " interfaces" 
 	);
 	for ( Class nextClass : ci ) {
-	    interfaces.add( nextClass.getName() );
+	    this.interfaces.add( nextClass.getName() );
 	    System.out.println("Adding " + nextClass.getName()); 
 	}
     } // setIterfaces() 
 
     private void setAncestors() {
-	System.out.println( "Looking for ancestors of " + o.getClass().getName() );
+	System.out.println( "Looking for ancestors of " + o_1.getClass().getName() );
 	ancestors = new LinkedHashSet< String >();
 	boolean isObject = false;
-	Class parent = o.getClass().getSuperclass();
+	this.setInterfaces( o_1.getClass() );
+	Class parent = o_1.getClass().getSuperclass();
+	
 	String className = "";
 	while ( !isObject  ) {
+	    if (parent.getName() != null) {
+		System.out.println( parent.getName() + " is not null"  );
+	    }
 	    
 	    System.out.println( "Parent is a " + parent.getName() );
 	    if ( parent.getName().equals( "java.lang.Object" ) ) {
-		// isObject = true;
+		isObject = true;
 	    }
 	    className = parent.getName();
 	    ancestors.add( className );
@@ -47,14 +52,14 @@ public class ClassUtil {
     } // setAncestors()
 
     public ClassUtil( Object o2 ) {
-	this.o = o2;
-	try {
-	
-	this.setInterfaces();
+	this.o_1 = o2;
+	// try {
+	interfaces = new LinkedHashSet< String >();
+	// this.setInterfaces();
 	this.setAncestors();
-	} catch ( Exception e ) {
+	// } catch ( Exception e ) {
 	    // e.printStackTrace();
-	}
+	    // }
     }
     
     public boolean doesImplement( String interfaceName ) {
@@ -71,7 +76,7 @@ public class ClassUtil {
        fully-qualified class name.
      */
     public boolean isInstanceOf( String fqName ) {
-	if ( o.getClass().getName().equals( fqName ) ) {
+	if ( o_1.getClass().getName().equals( fqName ) ) {
 	    return true;
 	} else {
 	    return false;
