@@ -29,7 +29,7 @@ public class ClassUtilTest extends Specification {
     mga.that(sListCU.isInstanceOf("java.util.ArrayList"))
     mga.that(sListCU.doesImplement("java.io.Serializable"))
     mga.that(sListCU.doesImplement("java.lang.Cloneable"))
-    // mga.that(sListCU.doesImplement("java.util.Collection"))
+    mga.that(sListCU.doesImplement("java.util.Collection"))
     mga.that(sListCU.doesImplement("java.util.List"))
     mga.that(sListCU.doesImplement("java.util.RandomAccess"))
     mga.that(!sListCU.doesImplement("RandomAccess"))

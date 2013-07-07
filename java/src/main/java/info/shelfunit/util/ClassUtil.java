@@ -32,6 +32,7 @@ public class ClassUtil {
 	
 	String className = "";
 	while ( !isObject  ) {
+	    this.setInterfaces( parent );
 	    if (parent.getName() != null) {
 		System.out.println( parent.getName() + " is not null"  );
 	    }
