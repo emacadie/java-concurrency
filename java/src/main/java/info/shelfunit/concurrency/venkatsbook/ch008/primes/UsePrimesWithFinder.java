@@ -45,15 +45,16 @@ public class UsePrimesWithFinder {
 	    final int upper = (index == numberOfParts - 1) ? number : lower + chunksPerPartition - 1;
 	    final List< Integer > bounds = Collections.unmodifiableList( Arrays.asList(lower, upper) );
 	    final ActorRef primeFinder = system.actorOf(new Props(PrimesWithFinder.class), UUID.randomUUID().toString());
-	    results.add( Patterns.ask(primeFinder, bounds, (2 * 1000) ) );
-	    Thread.sleep( 1 * 1000 );
+	    results.add( Patterns.ask(primeFinder, bounds, (5 * 1000) ) );
+	    // Thread.sleep( 300 ); // 1 * 1000 );
 	} // for ( int index = 0; index < numberOfParts; index++ )
  
 	int count = 0;
 	IntegerFuture< Object > intFuture = new IntegerFuture< Object >();
 	Thread.sleep( 10 * 1000 );
+	System.out.println( "Loop starting" );
+
 	for ( Future< Object > result : results ) {
-	     
 	    try {
 		count += 0; 
 		result.onSuccess(intFuture, system.dispatcher());
