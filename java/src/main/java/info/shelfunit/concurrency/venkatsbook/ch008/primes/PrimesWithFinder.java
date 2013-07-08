@@ -2,7 +2,7 @@ package info.shelfunit.concurrency.venkatsbook.ch008.primes;
 
 import akka.actor.UntypedActor;
 import java.util.List;
-// import java.util.ArrayList;
+import info.shelfunit.util.ClassUtil;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
@@ -11,13 +11,11 @@ public class PrimesWithFinder extends UntypedActor {
     public void onReceive( final Object boundsList ) {
 
 	System.out.println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
-	final List< Integer > bounds = ( List< Integer > ) boundsList;
-	// final List< Integer > bounds = ArrayList.class.cast( boundsList);
-	// final List< Integer > bounds = new ArrayList< Integer >();
-	// bounds = List.class.cast( boundsList);
-	final int count = this.countPrimesInRange( bounds.get(0), bounds.get(1) );
-	getSender().tell(count, getSelf());
-
+	if ( new ClassUtil(boundsList).doesImplement( "java.util.List" ) ) {
+	    final List< Integer > bounds = ( List< Integer > ) boundsList;
+	    final int count = this.countPrimesInRange( bounds.get(0), bounds.get(1) );
+	    getSender().tell(count, getSelf());
+	}
     } // end onReceive
 
     private boolean isPrime( final int number ) {

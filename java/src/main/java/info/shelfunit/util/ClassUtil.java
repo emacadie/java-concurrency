@@ -17,44 +17,46 @@ public class ClassUtil {
     } // setIterfaces() 
 
     private void setAncestors() {
-	ancestors = new LinkedHashSet< String >();
+	
 	boolean isObject = false;
 	this.setInterfaces( o_1.getClass() );
 	Class parent = o_1.getClass().getSuperclass();
-	
 	String className = "";
 	while ( !isObject  ) {
 	    this.setInterfaces( parent );
-	    
-	    if ( parent.getName().equals( "java.lang.Object" ) ) {
+	    className = parent.getName();
+	    if ( className.equals( "java.lang.Object" ) ) {
 		isObject = true;
 	    }
-	    className = parent.getName();
 	    ancestors.add( className );
 	    try {
 		parent = Class.forName( className ).getSuperclass();
 	    } catch ( Exception e ) {
 		isObject = true;
 	    }
-	}
+	} // while ( !isObject  ) {
 	
     } // setAncestors()
 
     public ClassUtil( Object o2 ) {
 	this.o_1 = o2;
 	interfaces = new LinkedHashSet< String >();
+	ancestors  = new LinkedHashSet< String >();
 	this.setAncestors();
     }
-    
+
+    /** This will return true if the object sent to the constructor 
+       implements the interface specified by the argument given. The argument must be the fully-qualified interface name.
+     */
     public boolean doesImplement( String interfaceName ) {
 	if ( interfaces.contains( interfaceName ) ) {
 	    return true;
 	} else {
 	    return false;
 	}
-    } // end implements
+    } // end doesImplement
     
-    /** This will return true if an object is an instance of a class
+    /** This will return true if the object sent to the constructor is an instance of a class
        specified by the argument given. The argument must be the 
        fully-qualified class name.
      */
