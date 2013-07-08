@@ -39,6 +39,6 @@ java/build/tmp/*
 java/build/docs/*
 # build/*
 java/.gradle/*
-
+.gradle/*
 
 #- EOF
