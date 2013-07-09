@@ -4,7 +4,7 @@ apply plugin: 'groovy'
 // do not run this every single time
 apply plugin: 'checkstyle'
 
-// apply plugin: 'scala' // for Akka, not needed
+
 
 repositories {
   mavenCentral()
@@ -30,7 +30,9 @@ allprojects {
     testCompile 'org.mockito:mockito-all:[1.8.5,)'
     // From Maven, it's GroupId:ArtifactId:Version 
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    testCompile 'com.typesafe.akka:akka-testkit_2.10:2.2.0-RC2'
 
+    // testCompile ''
     compile 'commons-codec:commons-codec:1.6'
     // compile 'io.netty:netty:3.5.7.Final'
     compile 'log4j:log4j:1.2.17'
@@ -49,7 +51,8 @@ allprojects {
     compile 'org.clojure:clojure:1.5.1'
 
     // for Akka
-    compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
+    // This works: compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
+    compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC2'
     // compile 'com.typesafe.akka:akka-actor:2.10.1'
     // compile 'org.scala-lang:scala-library:2.10.1'
 
