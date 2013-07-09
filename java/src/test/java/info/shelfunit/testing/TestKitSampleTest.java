@@ -17,9 +17,11 @@ public class TestKitSampleTest {
 	ActorRef target = null;
 	public void onReceive(Object msg) {
 	    if (msg.equals("hello")) {
+		System.out.println( "SomeActor got hello" );
 		getSender().tell("world", getSelf());
 		if (target != null) target.forward(msg, getContext());
 	    } else if (msg instanceof ActorRef) {
+		System.out.println( "SomeActor got ActorRef" );
 		target = (ActorRef) msg;
 		getSender().tell("done", getSelf());
 	    }
