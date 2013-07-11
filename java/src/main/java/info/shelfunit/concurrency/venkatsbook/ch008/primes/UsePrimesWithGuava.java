@@ -48,7 +48,7 @@ public class UsePrimesWithGuava {
 		.add(upper)
 		.build();
 
-	    final ActorRef primeFinder = system.actorOf(new Props(PrimesWithGuava.class), UUID.randomUUID().toString());
+	    final ActorRef primeFinder = system.actorOf(Props.create(PrimesWithGuava.class), UUID.randomUUID().toString());
 	    results.add( Patterns.ask(primeFinder, bounds2, (2 * 1000) ) );
 	    Thread.sleep( 1 * 1000 );
 	} // for ( int index = 0; index < numberOfParts; index++ )

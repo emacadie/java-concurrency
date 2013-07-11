@@ -1,6 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-public class FileToProcess {
+public final class FileToProcess {
 
     public final String fileName;
 

@@ -58,7 +58,7 @@ public class MyActorTest {
     @Test
     public void demonstrateTestActorRef() {
 	ActorSystem system = ActorSystem.create("PiSystem");
-	final Props props = new Props(MyActor.class);
+	final Props props = Props.create(MyActor.class);
 	System.out.println( "props.dispatcher(): " + props.dispatcher() );
 	// orig:
 	final TestActorRef<MyActor> ref = TestActorRef.create(system, props, "testA");
@@ -77,12 +77,12 @@ public class MyActorTest {
 	System.out.println("------------------------------");
 	System.out.println("Starting giveSomeLoveToTestActorRef() {");
 	ActorSystem system = ActorSystem.create("PiSystem");
-	final Props props = new Props(MyActor.class);
+	final Props props = Props.create(MyActor.class);
 	final TestActorRef<MyActor> ref = TestActorRef.create(system, props, "testB");
 	final Future<Object> future = Patterns.ask(ref, "say42", 3000);
 	assertTrue(future.isCompleted());
 	try {
-	assertEquals(42, Await.result(future, Duration.Zero()));
+	    assertEquals(42, Await.result(future, Duration.Zero()));
 	} catch ( Exception e ) {
 	    e.printStackTrace();
 	}

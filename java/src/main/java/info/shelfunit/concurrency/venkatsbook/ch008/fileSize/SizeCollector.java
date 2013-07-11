@@ -30,6 +30,18 @@ public class SizeCollector extends UntypedActor {
 	    pendingNumberOfFilesToVisit += 1;
 	    sendAFileToProcess();
 	}
+
+	if ( message instanceof FileSize ) {
+	    totalSize += ( ( FileSize )( message ) ).size;
+	    pendingNumberOfFilesToVisit -= 1;
+	    if ( pendingNumberOfFilesToVisit == 0 ) {
+		long end = System.nanoTime();
+		System.out.println( "Total size is: " + totalSize );
+		System.out.println( "Time taken is: " + ( end - start )/1.0e9  );
+		getContext().system().shutdown();
+	    }
+	}
+
     } // onReceive
     
 } // end SizeCollector

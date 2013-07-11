@@ -16,7 +16,7 @@ public class PrimesWithGuava extends UntypedActor {
 	if ( new ClassUtil(boundsList).doesImplement( "java.util.List" ) ) {
 	    final List< Integer > bounds = ImmutableList.class.cast( boundsList);
 	    final int count = this.countPrimesInRange( bounds.get(0), bounds.get(1) );
-	getSender().tell(count, getSelf());
+	    getSender().tell(count, getSelf());
 	}
     } // end onReceive
 

@@ -65,6 +65,7 @@ gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.U
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes002 -PmainArgs="10000000 100"      
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100"      
 That should give  664579
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
@@ -89,5 +90,7 @@ http://www.scala-lang.org/archives/downloads/distrib/files/nightly/docs/library/
 
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 
+To get the compiler warnings: gradle build -q   
+The new version of Akka seems to be suppressing them by default.  
 
 

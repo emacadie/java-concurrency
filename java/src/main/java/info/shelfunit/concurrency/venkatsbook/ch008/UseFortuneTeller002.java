@@ -16,8 +16,8 @@ public class UseFortuneTeller002 {
 
     public static void main( final String[] args ) throws InterruptedException {
 	ActorSystem system = ActorSystem.create("This-seems-like-a-lot-of-work");
-	final ActorRef gypsyLady = system.actorOf(new Props(FortuneTeller.class), UUID.randomUUID().toString());
-	final ActorRef gypsyLady02 = system.actorOf(new Props(FortuneTeller.class), UUID.randomUUID().toString());
+	final ActorRef gypsyLady = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
+	final ActorRef gypsyLady02 = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
 
 	final ArrayList< Future< Object > > futures = new ArrayList< Future< Object > >();
 	futures.add( Patterns.ask(gypsyLady, "Hello", 1000) );
@@ -26,9 +26,9 @@ public class UseFortuneTeller002 {
 	System.out.println( "Size of futures: " + futures.size() );
 
 
-	for ( Future<Object> fString : futures) {
+	for ( Future< Object > fString : futures) {
 	    System.out.println( "In the enhanced for loop" );
-	    fString.onSuccess(new PrintResult<Object>(), system.dispatcher());
+	    fString.onSuccess(new PrintResult< Object >(), system.dispatcher());
 	} // end for
 
 	

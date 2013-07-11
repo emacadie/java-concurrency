@@ -44,7 +44,7 @@ public class UsePrimesWithFinder {
 	    final int lower = index * chunksPerPartition + 1;
 	    final int upper = (index == numberOfParts - 1) ? number : lower + chunksPerPartition - 1;
 	    final List< Integer > bounds = Collections.unmodifiableList( Arrays.asList(lower, upper) );
-	    final ActorRef primeFinder = system.actorOf(new Props(PrimesWithFinder.class), UUID.randomUUID().toString());
+	    final ActorRef primeFinder = system.actorOf(Props.create(PrimesWithFinder.class), UUID.randomUUID().toString());
 	    results.add( Patterns.ask(primeFinder, bounds, (5 * 1000) ) );
 	    // Thread.sleep( 300 ); // 1 * 1000 );
 	} // for ( int index = 0; index < numberOfParts; index++ )

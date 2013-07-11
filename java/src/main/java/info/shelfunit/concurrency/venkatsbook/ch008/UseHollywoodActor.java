@@ -10,7 +10,7 @@ public class UseHollywoodActor {
 
     public static void main( final String[] args ) throws InterruptedException {
 	ActorSystem system = ActorSystem.create("This-is-the-best-book-ever");
-	final ActorRef scottBakula = system.actorOf(new Props(HollywoodActor.class), "NX-01");
+	final ActorRef scottBakula = system.actorOf(Props.create(HollywoodActor.class), "NX-01");
 
 	scottBakula.tell("Sam Beckett", scottBakula);
 	// Thread.sleep(1000);

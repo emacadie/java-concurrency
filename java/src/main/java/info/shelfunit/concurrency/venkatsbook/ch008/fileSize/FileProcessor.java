@@ -23,7 +23,12 @@ public class FileProcessor extends UntypedActor {
     }
 
     public void onReceive( final Object message ) {
-	FileToProcess fileToProcess = ( FileToProcess ) message;
+
+	final FileToProcess fileToProcess = ( FileToProcess ) message;
+	// orig: final File file = new File( fileToProcess.fileName );
+	if ( message instanceof FileToProcess ) {
+	    // System.out.println( "here is the fileName: " + ((FileToProcess)message).fileName );
+	}
 	final File file = new File( fileToProcess.fileName );
 	long size = 0L;
 
@@ -43,7 +48,7 @@ public class FileProcessor extends UntypedActor {
 
 	sizeCollector.tell( new FileSize(size), getSelf() );
 	registerToGetFile();
-
+	// } // if (message instanceof)
     } // onReceive
     
 } // end FileProcessor
