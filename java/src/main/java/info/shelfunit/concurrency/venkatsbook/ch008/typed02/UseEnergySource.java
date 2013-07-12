@@ -1,4 +1,4 @@
-package info.shelfunit.concurrency.venkatsbook.ch008.typed01;
+package info.shelfunit.concurrency.venkatsbook.ch008.typed02;
 
 import akka.actor.ActorSystem;
 import akka.actor.TypedActor;

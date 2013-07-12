@@ -66,6 +66,7 @@ gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.U
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100"      
 That should give  664579
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
