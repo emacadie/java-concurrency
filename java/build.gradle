@@ -53,6 +53,7 @@ allprojects {
     // for Akka
     // This works: compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
     compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC2'
+    compile 'com.typesafe.akka:akka-transactor_2.10:2.2.0'
     // compile 'com.typesafe.akka:akka-actor:2.10.1'
     // compile 'org.scala-lang:scala-library:2.10.1'
 
@@ -64,6 +65,9 @@ allprojects {
     
     // Guava
     compile 'com.google.guava:guava:14.0.1'
+
+    // GPars
+    compile 'org.codehaus.gpars:gpars:1.0.0'
   }
 
   tasks.withType(Compile) { Compile compile ->

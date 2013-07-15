@@ -68,6 +68,9 @@ That should give  664579
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
 
+Venkat, Chapter 09:
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.HollywoodActorRunner         
+
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
 It would have been nice to see that in the Javadoc.    
@@ -88,6 +91,8 @@ http://doc.akka.io/docs/akka/2.0.4/project/migration-guide-1.3.x-2.0.x.html
 Home of ScalaSTM: http://nbronson.github.io/scala-stm/index.html     
 Home of Multiverse: http://multiverse.codehaus.org/60second.html    
 http://www.scala-lang.org/archives/downloads/distrib/files/nightly/docs/library/index.html#scala.concurrent.Future    
+
+Guava: https://code.google.com/p/guava-libraries/    
 
 A good presentation on Spock: http://www.slideshare.net/elizhender/spock-pres-15236797    
 

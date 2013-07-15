@@ -1,9 +1,9 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.typed02;
 
-import akka.actor.TypedActor;
+// import akka.actor.TypedActor;
 import akka.actor.TypedActor.PreStart;
-import akka.actor.Scheduler;
-import java.util.concurrent.TimeUnit;
+// import akka.actor.Scheduler;
+// import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 
@@ -16,7 +16,7 @@ public class EnergySourceImpl implements EnergySource, PreStart {
     class Replenish {}
 
     public void preStart() {
-	Scheduler.schedule( TypedActor.self(), new Replenish(), 1, 1, TimeUnit.SECONDS );
+	// Scheduler.schedule( TypedActor.self(), new Replenish(), 1, 1, TimeUnit.SECONDS );
     } // end preStart
 
     public long getUnitsAvailable() { return level; }
