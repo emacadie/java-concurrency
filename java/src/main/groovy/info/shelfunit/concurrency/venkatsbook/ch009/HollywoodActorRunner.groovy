@@ -1,7 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch009
 
-// import groovyx.gpars.actor.DefaultActor
-
+import java.util.concurrent.TimeUnit
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 class HollywoodActorRunner { 
@@ -25,6 +24,7 @@ class HollywoodActorRunner {
     println("About to send messages 002")
     depp << "More predictable than he thinks"
     hanks "Deserves another Oscar"
+    [depp, hanks]*.join(1, TimeUnit.SECONDS)
     
     println("Done")
     

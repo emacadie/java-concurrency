@@ -14,25 +14,12 @@ class HollywoodActor extends DefaultActor {
     name = actorName
     println "set name to $name"
   }
-  /*
-  @Override 
-  protected void act() { 
-    loop { 
-      react { 
-	println it
-	// println "ddddddd"
-      }
-    }
-  }
-  */
 
   @Override
   void act() {
     loop { 
-      // react {  msg -> println "Received: $msg"; }
-     
+    
       react { role ->
-	// println it
 	println " "
 	println "$name playing the role $role"
 	println "$name runs in ${Thread.currentThread()}"
