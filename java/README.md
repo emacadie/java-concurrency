@@ -71,6 +71,10 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.
 Venkat, Chapter 09:
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.HollywoodActorRunner         
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.OtherRunner         
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.Fortune    
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage001   
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage002   
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage003   
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
