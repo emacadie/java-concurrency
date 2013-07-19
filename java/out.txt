@@ -1,0 +1,15 @@
+-- Groovy version: 1.8.6
+null
+-- Groovy version: 1.8.6
+configProperties is a java.util.LinkedHashMap
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:runJava
+ppppppppppppppppppppppppppppppp
+Here is args[0]: ${args[0]}
+
+BUILD SUCCESSFUL
+
+Total time: 7.287 secs

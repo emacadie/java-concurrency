@@ -4,10 +4,3 @@ package info.shelfunit.concurrency.venkatsbook.ch009.fileSize;
 
 public final class RequestAFileJ{ 
 }
-
-
-
-
-
-
-

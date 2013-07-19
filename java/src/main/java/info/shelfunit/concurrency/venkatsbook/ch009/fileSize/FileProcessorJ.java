@@ -1,16 +1,11 @@
 package info.shelfunit.concurrency.venkatsbook.ch009.fileSize;
 
-import groovy.transform.Immutable;
-
-import groovyx.gpars.actor.Actors;
-import groovyx.gpars.actor.DefaultActor;
-import java.util.concurrent.TimeUnit;
-
+import groovyx.gpars.actor.DynamicDispatchActor;
 import java.io.File;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
-public class FileProcessorJ extends DefaultActor {
+public class FileProcessorJ extends DynamicDispatchActor {
     private SizeCollectorJ sizeCollector;
 
     public FileProcessorJ( SizeCollectorJ theSizeCollector ) { 

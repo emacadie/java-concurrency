@@ -14,8 +14,3 @@ public final class FileToProcessJ {
     }
 
 } // end FileToProcessJ
-
-
-
-
-

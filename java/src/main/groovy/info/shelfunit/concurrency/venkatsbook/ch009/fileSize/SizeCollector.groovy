@@ -19,15 +19,20 @@ class SizeCollector extends DynamicDispatchActor{
 
   def sendAFileToProcess() {
     if (toProcessFileNames && idleFileProcessors) {
+      def ifpSize01 = idleFileProcessors.size
       idleFileProcessors.first() << new FileToProcess(toProcessFileNames.first())
+      def ifpSize02 = idleFileProcessors.size
       idleFileProcessors = idleFileProcessors.tail()
+      def ifpSize03 = idleFileProcessors.size
       toProcessFileNames = toProcessFileNames.tail()
       println("idleFileProcessors is a ${idleFileProcessors.class.name}")
+      println("idleFileProcessors sizes: 1: ${ifpSize01} 2: ${ifpSize02} 3: ${ifpSize03}")
       println("toProcessFileNames is a ${toProcessFileNames.class.name}")
     }
   } // sendAFileToProcess() 
 
   void onMessage(RequestAFile message) {
+    println("idleFileProcessors sender is a " + sender.class.name)
     idleFileProcessors.add(sender)
     sendAFileToProcess()
   }

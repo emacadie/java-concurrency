@@ -1,0 +1,927 @@
+An exception occurred in the Actor thread Actor Thread 2
+An exception occurred in the Actor thread Actor Thread 59
+An exception occurred in the Actor thread Actor Thread 60
+An exception occurred in the Actor thread Actor Thread 62
+An exception occurred in the Actor thread Actor Thread 61
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 10
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 9
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 8
+An exception occurred in the Actor thread Actor Thread 7
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 64
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 63
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 2
+An exception occurred in the Actor thread Actor Thread 11
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 14
+An exception occurred in the Actor thread Actor Thread 13
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 12
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 59
+An exception occurred in the Actor thread Actor Thread 8
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 16
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 7
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 65
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 61
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 18
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 13
+An exception occurred in the Actor thread Actor Thread 60
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 8
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 65
+An exception occurred in the Actor thread Actor Thread 19
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 14
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 22
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 21
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 12
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 20
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 20
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 12
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 66
+An exception occurred in the Actor thread Actor Thread 68
+An exception occurred in the Actor thread Actor Thread 63
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 67
+An exception occurred in the Actor thread Actor Thread 59
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 18
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 11
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 2
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 16
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 7
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 23
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 27
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 28
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 34
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 35
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 69
+An exception occurred in the Actor thread Actor Thread 8
+An exception occurred in the Actor thread Actor Thread 21
+An exception occurred in the Actor thread Actor Thread 22
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 60
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 46
+An exception occurred in the Actor thread Actor Thread 42
+An exception occurred in the Actor thread Actor Thread 41
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 50
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 40
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 53
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 39
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 57
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 38
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 15
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 37
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 36
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 33
+An exception occurred in the Actor thread Actor Thread 31
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 30
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 29
+An exception occurred in the Actor thread Actor Thread 70
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 26
+An exception occurred in the Actor thread Actor Thread 25
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 24
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 61
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 62
+An exception occurred in the Actor thread Actor Thread 44
+An exception occurred in the Actor thread Actor Thread 32
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 19
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 14
+An exception occurred in the Actor thread Actor Thread 64
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 17
+An exception occurred in the Actor thread Actor Thread 10
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 9
+An exception occurred in the Actor thread Actor Thread 58
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 5
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 6
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 3
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 4
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 56
+An exception occurred in the Actor thread Actor Thread 55
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 54
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 52
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 51
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 49
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 48
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 47
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 45
+An exception occurred in the Actor thread Actor Thread 43
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+java.lang.UnsupportedOperationException: The act method has not been overridden
+	at groovyx.gpars.actor.DefaultActor.act(DefaultActor.java:80)
+	at groovyx.gpars.actor.DefaultActor.handleStart(DefaultActor.java:340)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:70)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+An exception occurred in the Actor thread Actor Thread 1
+java.lang.IllegalStateException: The actor cannot accept messages at this point.
+	at groovyx.gpars.actor.Actor.createActorMessage(Actor.java:289)
+	at groovyx.gpars.actor.AbstractLoopingActor.send(AbstractLoopingActor.java:241)
+	at info.shelfunit.concurrency.venkatsbook.ch009.fileSize.SizeCollectorJ.sendAFileToProcess(SizeCollectorJ.java:21)
+	at info.shelfunit.concurrency.venkatsbook.ch009.fileSize.SizeCollectorJ.onMessage(SizeCollectorJ.java:32)
+	at info.shelfunit.concurrency.venkatsbook.ch009.fileSize.SizeCollectorJ$onMessage$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at info.shelfunit.concurrency.venkatsbook.ch009.fileSize.SizeCollectorJ$onMessage.call(Unknown Source)
+	at groovyx.gpars.actor.impl.DDAClosure$_createDDAClosure_closure1.doCall(DDAClosure.groovy:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:909)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:295)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
