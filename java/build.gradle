@@ -138,6 +138,9 @@ task runGroovy(type: JavaExec) {
      jvmArgs '-client'
      // We can pass arguments to the main() method
      // of gradle.sample.SampleApp.
+     if ( rootProject.hasProperty( "mainArgs" ) ) {     
+     	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
+     } 
 }
 
 
