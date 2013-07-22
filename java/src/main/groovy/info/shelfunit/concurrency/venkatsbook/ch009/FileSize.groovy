@@ -34,8 +34,9 @@ class FileSize {
       }
     }
 
-    pendingFiles << -1
-    sizes << size
+    pendingFiles << -1 // same as pendingFiles.bind( -1 )
+    sizes << size // same as sizes.bind( size )
+
   } // def findSize(File file)
 
   def findTotalFileSize(File file) { 
