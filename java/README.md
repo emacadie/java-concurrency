@@ -64,7 +64,7 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortu
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100"      
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes002 -PmainArgs="10000000 100"      
 gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100"      
-That should give  664579
+That should give  664579    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
 
@@ -77,6 +77,9 @@ gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiM
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage003   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinder -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinderJ -PmainArgs="/home/ericm/github"     
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.DataFlow001        
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.FileSize -PmainArgs="/home/ericm/github"     
+
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
