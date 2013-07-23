@@ -3,8 +3,6 @@ package info.shelfunit.concurrency.venkatsbook.ch006.writeSkew;
 import scala.concurrent.stm.Ref;
 import scala.concurrent.stm.japi.STM;
 
-// import java.util.concurrent.Callable;
-
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 public class Portfolio {

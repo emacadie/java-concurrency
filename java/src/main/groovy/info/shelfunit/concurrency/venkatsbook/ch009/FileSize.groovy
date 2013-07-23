@@ -1,7 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch009
 
 import groovy.transform.Immutable
-
 import groovyx.gpars.actor.Actors
 import groovyx.gpars.actor.DefaultActor
 import groovyx.gpars.dataflow.DataflowQueue
@@ -48,16 +47,11 @@ class FileSize {
     int other = 0
     while(true) { 
       totalSize += sizes.val
-           
-      // println("filesToVisit: ${filesToVisit}, (pendingFiles.val + pendingFiles.val): ${(pendingFiles.val + pendingFiles.val)}")
-      // println("filesToVisit: ${filesToVisit}, pendingFiles.val: ${pendingFiles.val}")
-      // if(!(filesToVisit += (pendingFiles.val + pendingFiles.val))) break
-      // other = pendingFiles.val
+            
       if(!(filesToVisit += (pendingFiles.val + pendingFiles.val))) break
 
     }
-    // println("filesToVisit: ${filesToVisit}, pendingFiles.val: ${other}")
-    
+        
     totalSize
   } // def findTotalFileSize(File file) 
   

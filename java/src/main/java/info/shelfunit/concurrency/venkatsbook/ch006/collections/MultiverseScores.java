@@ -6,9 +6,10 @@ import org.multiverse.api.StmUtils;
 import org.multiverse.api.collections.TxnMap;
 import org.multiverse.api.references.TxnLong;
 import org.multiverse.api.Txn;
-// import org.multiverse.api.collections.TxnSet;
+
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 // this will not run. I get a "ToDoException"
+
 public class MultiverseScores {
 
     final private TxnMap< String, Integer > scoreValues = StmUtils.newTxnHashMap();

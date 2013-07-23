@@ -4,7 +4,6 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-// More imports!
 import akka.pattern.Patterns;
 import scala.concurrent.Future;
 import akka.util.Timeout;

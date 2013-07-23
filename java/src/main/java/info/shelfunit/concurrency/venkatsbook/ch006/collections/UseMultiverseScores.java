@@ -1,9 +1,5 @@
 package info.shelfunit.concurrency.venkatsbook.ch006.collections;
 
-//import scala.concurrent.stm.Ref.*;
-
-// import scala.concurrent.stm.TMap.*;
-
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
 public class UseMultiverseScores {

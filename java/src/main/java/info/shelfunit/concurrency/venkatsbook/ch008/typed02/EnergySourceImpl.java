@@ -1,9 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.typed02;
 
-// import akka.actor.TypedActor;
 import akka.actor.TypedActor.PreStart;
-// import akka.actor.Scheduler;
-// import java.util.concurrent.TimeUnit;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 

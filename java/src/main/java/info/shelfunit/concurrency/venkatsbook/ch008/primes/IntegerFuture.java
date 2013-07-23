@@ -15,11 +15,7 @@ public final class IntegerFuture< T > extends OnSuccess< T > {
     }
 
     @Override public final void onSuccess(T t) {
-	// System.out.println( "t is a " + t.getClass().getName() );
-	// Class integerClass = Class.forName("java.lang.Integer");
 	Integer tInt = Integer.class.cast(t);
-	// System.out.println(tInt);
 	holdInt += tInt.intValue();
-	// System.out.println( "value of holdInt: " + holdInt );
     }
 }

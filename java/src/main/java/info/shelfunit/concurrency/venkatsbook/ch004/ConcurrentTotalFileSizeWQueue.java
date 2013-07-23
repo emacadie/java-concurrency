@@ -50,7 +50,6 @@ public class ConcurrentTotalFileSizeWQueue {
 	    while ( pendingFileVisits.get() > 0 || fileSizes.size() > 0 ) {
 		final Long size = fileSizes.poll( 10, TimeUnit.SECONDS );
 		totalSize += size;
-		// System.out.println( "timesPolled: " + ( ++timesPolled ) );
 	    } // while ( pendingFileVisits.get() > 0 || fileSizes.size() > 0 )
 	    return totalSize;
 	} finally { service.shutdown(); }

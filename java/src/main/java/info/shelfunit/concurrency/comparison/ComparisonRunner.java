@@ -46,7 +46,6 @@ public class ComparisonRunner {
 	BlockingQueue< SynchronizedHolder > theQueue = new ArrayBlockingQueue< SynchronizedHolder >( iterations );
 	final long start = System.nanoTime();
 	for ( int x = 0; x < iterations;  x++ ) {
-	    // System.out.println( "About to do iteration " + x );
 	    SynchronizedHolder sh = new SynchronizedHolder();
 	    sh.setFirstString(fString);
 	    sh.setSecondString(sString);
@@ -66,7 +65,6 @@ public class ComparisonRunner {
 	BlockingQueue< LockHolder > theQueue = new ArrayBlockingQueue< LockHolder >( iterations );
 	final long start = System.nanoTime();
 	for ( int x = 0; x < iterations;  x++ ) {
-	    // System.out.println( "About to do iteration " + x );
 	    LockHolder lh = new LockHolder();
 	    lh.setFirstString(fString);
 	    lh.setSecondString(sString);
@@ -86,7 +84,6 @@ public class ComparisonRunner {
 	BlockingQueue< SingleLockHolder > theQueue = new ArrayBlockingQueue< SingleLockHolder >( iterations );
 	final long start = System.nanoTime();
 	for ( int x = 0; x < iterations;  x++ ) {
-	    // System.out.println( "About to do iteration " + x );
 	    SingleLockHolder slh = new SingleLockHolder();
 	    slh.setFirstString(fString);
 	    slh.setSecondString(sString);

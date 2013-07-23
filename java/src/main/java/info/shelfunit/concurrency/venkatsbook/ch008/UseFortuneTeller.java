@@ -4,14 +4,10 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-// More imports!
 import akka.pattern.Patterns;
 import scala.concurrent.Await;
 import scala.concurrent.Future;
-// import akka.dispatch.Futures;
-// import scala.concurrent.duration.Duration;
 import akka.util.Timeout;
-// import java.util.concurrent.TimeUnit;
 import java.util.ArrayList;
 import java.util.UUID;
 

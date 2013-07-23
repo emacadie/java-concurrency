@@ -10,13 +10,11 @@ public class SAccountJavaWithdraw implements Callable< Boolean > {
     final int amount;
     
     public SAccountJavaWithdraw( final Ref balance, final int amountA) {
-	// System.out.println( "in SAccountjavaWithdraw constructor" );
 	this.balance = balance;
 	this.amount = amountA;
     }
 
     public Boolean call() {
-	// System.out.println( "in SAccountjavaWithdraw.call" );
 	final int currentBalance = (Integer) balance.deref();
 	if ( ( amount > 0 ) && ( currentBalance >= amount ) ) {
 	    balance.set(currentBalance - amount);
