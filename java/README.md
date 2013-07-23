@@ -67,6 +67,8 @@ gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.U
 That should give  664579    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.gpars.UseFortuneTellerGPars    
+
 
 Venkat, Chapter 09:
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.HollywoodActorRunner         
