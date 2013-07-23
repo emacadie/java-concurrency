@@ -45,10 +45,18 @@ class FileSize {
 
     int filesToVisit = 0
     long totalSize = 0
+    int other = 0
     while(true) { 
       totalSize += sizes.val
+           
+      // println("filesToVisit: ${filesToVisit}, (pendingFiles.val + pendingFiles.val): ${(pendingFiles.val + pendingFiles.val)}")
+      // println("filesToVisit: ${filesToVisit}, pendingFiles.val: ${pendingFiles.val}")
+      // if(!(filesToVisit += (pendingFiles.val + pendingFiles.val))) break
+      // other = pendingFiles.val
       if(!(filesToVisit += (pendingFiles.val + pendingFiles.val))) break
+
     }
+    // println("filesToVisit: ${filesToVisit}, pendingFiles.val: ${other}")
     
     totalSize
   } // def findTotalFileSize(File file) 
