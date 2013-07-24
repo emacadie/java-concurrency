@@ -1,6 +1,7 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.gpars;
 
 import groovyx.gpars.actor.DynamicDispatchActor;
+import java.util.Date;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
@@ -12,7 +13,7 @@ public class FortuneTellerGPars extends DynamicDispatchActor {
 	    replyIfExists("Here's looking at you, " + msg );
 	    System.out.println( "Just sent reply for String" );
 	} catch ( Exception e ) {
-	    // getSender().tell(new Failure(e), getSelf());
+
 	    throw e;
 	}
 
@@ -21,24 +22,38 @@ public class FortuneTellerGPars extends DynamicDispatchActor {
     public void onMessage( final Object msg ) {
 	System.out.println( "In onMessage for FortuneTellerGPars with Object" );
 	try {
-	    // getSender().tell("The arg was not a String, but a " + msg.getClass().getName(), getSelf());
-	   
 	} catch ( Exception e ) {
-	    // getSender().tell(new Failure(e), getSelf());
 	    throw e;
 	}
 
     } // end onMessage
 
     public void onMessage(final Double msg) {
-		System.out.println( "In onMessage for FortuneTellerGPars with Double" );
+	System.out.println( "In onMessage for FortuneTellerGPars with Double" );
 	try {
 	    replyIfExists( new Double(msg.doubleValue() * 2));
 	    System.out.println( "Just sent reply for Double" );
 	} catch ( Exception e ) {
-	    // getSender().tell(new Failure(e), getSelf());
 	    throw e;
 	}
     } // onMessage 
+
+
+    public void onMessage(final Planet msg) {
+	System.out.println( "In onMessage for FortuneTellerGPars with Planet" );
+	try {
+	    Planet plan2 = new Planet( (msg.getMass() * 2), 
+		new StringBuilder( msg.getName()).reverse().toString(), 
+		msg.getDateOfDiscovery()
+	    );
+	    for (int x = 0; x < 10; x++) {
+		System.out.println( "In onMessage for planet, with x == " + x );
+		Thread.sleep( 1 * 1000 );
+	    }
+	    System.out.println("About to send Planet reply");
+	    replyIfExists( plan2 );
+	} catch ( Exception e ) {
+	}
+    } // end onMessage
 
 } // end FortuneTellerGPars

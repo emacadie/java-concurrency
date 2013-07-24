@@ -87,5 +87,10 @@ public final class Planet {
      * created elsewhere.)
      */
     private final Date fDateOfDiscovery;
+
+    public String toString() {
+	return "Mass: " + this.getMass() + " Name: " + this.getName() + " Date: " + this.getDateOfDiscovery();
+    } // toString
+
 } // end Planet
 
