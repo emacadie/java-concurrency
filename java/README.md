@@ -81,7 +81,7 @@ gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSi
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinderJ -PmainArgs="/home/ericm/github"     
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.DataFlow001        
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.FileSize -PmainArgs="/home/ericm/github"     
-
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MyActorRunner     
 
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     

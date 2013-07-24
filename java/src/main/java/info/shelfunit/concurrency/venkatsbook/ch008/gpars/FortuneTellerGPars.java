@@ -1,7 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.gpars;
 
 import groovyx.gpars.actor.DynamicDispatchActor;
-import java.util.Date;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
