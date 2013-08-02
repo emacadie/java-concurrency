@@ -85,6 +85,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MyActorR
 
 Code in the info.shelfunit.concurrency.venkatsbook.multithreadtests package is from "Test Driving Multithreaded Code" at http://www.agiledeveloper.com/downloads.html     
 
+The Java 7 Concurrency Cookbook:    
+gradle runJava -PmainClass=info.shelfunit.concurrency.cookbook.chapter08.MyLockRunner    
+
 /home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/UseHollywoodActor.java:15: warning: [deprecation] tell(Object) in ActorRef has been deprecated    
       scottBakula.tell("Captain Archer");     
 It would have been nice to see that in the Javadoc.    
