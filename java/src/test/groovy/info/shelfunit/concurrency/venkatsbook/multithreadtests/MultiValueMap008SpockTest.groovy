@@ -7,6 +7,10 @@ import java.util.List;
 // import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import info.shelfunit.util.MyGroovyAssert
+import info.shelfunit.util.MyGroovyUtil
+import spock.lang.Specification
+
 
 /**
 Fortunately Java 5.0 introduced a Lock interface. Unlike synchronized, which
@@ -18,11 +22,13 @@ without having a test for it.
 For put method to be mutually exclusive, it should claim a lock (or monitor)
 and then release it. Let's ensure it does that.
  */
-public class MultiValueMap008Test extends TestCase {
+public class MultiValueMap008SpockTest extends Specification {
 
   MultiValueMap008<String, String> _map;
+  def mgu = new MyGroovyUtil()
+  def mga = new MyGroovyAssert()
 
-  @Override protected void setUp() throws Exception {
+  def setup() throws Exception {
     _map = new MultiValueMap008<String, String>();
   }
 
