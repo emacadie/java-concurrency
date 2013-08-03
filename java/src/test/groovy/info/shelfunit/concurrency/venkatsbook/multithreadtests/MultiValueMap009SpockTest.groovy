@@ -4,8 +4,11 @@ import junit.framework.TestCase;
 
 import java.util.Collections;
 import java.util.List;
-// import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
+import info.shelfunit.util.MyGroovyAssert
+import info.shelfunit.util.MyGroovyUtil
+import spock.lang.Specification
 
 /**
 In the previous step we used a mock for the Lock interface. While the
@@ -31,11 +34,13 @@ In this step, we'll only refactor the code. In the next, we'll put
 that to good use. We refactored the guts of the put method into
 a protected method named putValueForAKey.
  */
-public class MultiValueMap009Test extends TestCase {
+public class MultiValueMap009SpockTest extends Specification {
 
   MultiValueMap009<String, String> _map;
+  def mgu = new MyGroovyUtil()
+  def mga = new MyGroovyAssert()
 
-  @Override protected void setUp() throws Exception {
+  def setup() throws Exception {
     _map = new MultiValueMap009<String, String>();
   }
 
@@ -80,7 +85,7 @@ public class MultiValueMap009Test extends TestCase {
     assertEquals(Collections.synchronizedList(values).getClass(), values.getClass());
   }
 
-  class MockLock extends ReentrantLock {
+  class MockLock009 extends ReentrantLock {
     public boolean locked;
     public boolean unlocked;
 
@@ -94,7 +99,7 @@ public class MultiValueMap009Test extends TestCase {
   }
   
   public void testPutIsMutuallyExclusive() {
-    MockLock mockLock = new MockLock();
+    MockLock009 mockLock = new MockLock009();
     _map.setLock(mockLock);
 
     assertFalse(mockLock.locked);
