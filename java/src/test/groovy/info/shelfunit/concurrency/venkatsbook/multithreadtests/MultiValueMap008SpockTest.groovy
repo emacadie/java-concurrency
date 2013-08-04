@@ -103,7 +103,7 @@ public class MultiValueMap008SpockTest extends Specification {
     println("mockLock.locked before put: " + mockLock.locked )
     mga.that(!mockLock.locked);
     mga.that(!mockLock.unlocked);
-println("mockLock.locked before put: " + mockLock.locked )
+    println("mockLock.locked before put: " + mockLock.locked )
     _map.put("3", "three");
     println("mockLock.locked after put: " + mockLock.locked )
     // mga.that(mockLock.locked);

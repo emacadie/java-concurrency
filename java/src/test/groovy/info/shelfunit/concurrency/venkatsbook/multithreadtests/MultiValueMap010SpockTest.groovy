@@ -1,10 +1,11 @@
 package info.shelfunit.concurrency.venkatsbook.multithreadtests;
 
-import junit.framework.TestCase;
+import info.shelfunit.util.MyGroovyAssert
+import info.shelfunit.util.MyGroovyUtil
+import spock.lang.Specification
 
 import java.util.Collections;
 import java.util.List;
-// import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -13,7 +14,7 @@ put is doing the right thing, that is, calls lock, then does its work,
 then calls unlock.
  */
 
-public class MultiValueMap010Test extends TestCase {
+public class MultiValueMap010SpockTest extends Specification {
 
   MultiValueMap010<String, String> _map;
 

@@ -44,45 +44,55 @@ public class MultiValueMap009SpockTest extends Specification {
     _map = new MultiValueMap009<String, String>();
   }
 
-  public void testMapEmptyUponCreate() {
-    assertEquals(0, _map.getSize());
+  def "test Map Empty Upon Create"() { 
+    expect:
+    mgu.equals(0, _map.getSize());
   }
 
-  public void testGetValueForNonExistentKey() {
-    assertEquals(0, _map.getValues("nope").size());
+  def "test Get Value For Non Existent Key"() { 
+    expect:
+    mgu.equals(0, _map.getValues("nope").size());
   }
   
-  public void testPutOneValueForAKey() {
+  def "test Put One Value For A Key"() {
     _map.put("1", "one");
-    assertEquals("one", _map.getValues("1").get(0));
+  
+    expect:
+    mgu.equals("one", _map.getValues("1").get(0));
   }
 
-  public void testPutValueForAnotherKey() {
+  def "test Put Value For Another Key"() {
     _map.put("2", "two");
-    assertEquals("two", _map.getValues("2").get(0));
+    
+    expect:
+    mgu.equals("two", _map.getValues("2").get(0));
   }
 
-  public void testTwoValuesForOneKey() {
+  def "test Two Values For One Key"() {
     _map.put("1", "one");
     _map.put("1", "uno");
 
-    assertEquals("one", _map.getValues("1").get(0));
-    assertEquals("uno", _map.getValues("1").get(1));
+    expect:
+    mgu.equals("one", _map.getValues("1").get(0));
+    mgu.equals("uno", _map.getValues("1").get(1));
   }
   
-  public void testCheckSizeAfterPuts() {
+  def "test Check Size After Puts"() {
     _map.put("1", "one");
     _map.put("2", "two");
     _map.put("1", "uno");
 
-    assertEquals(2, _map.getSize());
+    expect:
+    mgu.equals(2, _map.getSize());
   }
   
-  public void testEnsureGetValuesReturnsSynchronizedList() {
+  def "test Ensure Get Values Returns Synchronized List"() {
     _map.put("1", "one");
     List<String> values = _map.getValues("1");
+    
+    expect:
+    mgu.equals(Collections.synchronizedList(values).getClass(), values.getClass());
 
-    assertEquals(Collections.synchronizedList(values).getClass(), values.getClass());
   }
 
   class MockLock009 extends ReentrantLock {
@@ -98,16 +108,16 @@ public class MultiValueMap009SpockTest extends Specification {
     }
   }
   
-  public void testPutIsMutuallyExclusive() {
+  def "test Put Is Mutually Exclusive"() {
     MockLock009 mockLock = new MockLock009();
     _map.setLock(mockLock);
 
-    assertFalse(mockLock.locked);
-    assertFalse(mockLock.unlocked);
+    mga.that(!mockLock.locked);
+    mga.that(!mockLock.unlocked);
 
     _map.put("3", "three");
 
-    assertTrue(mockLock.locked);
-    assertTrue(mockLock.unlocked);
+    // mga.that(mockLock.locked);
+    mga.that(mockLock.unlocked);
   }
 }
