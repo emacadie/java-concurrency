@@ -37,6 +37,7 @@ public class MultiValueMap010<K, V> {
   }
 
   protected void putValueForAKey(K key, V value) {
+      System.out.println("In putValueForAKey(K key, V value)  in the real class");
     List<V> values = _map.get(key);
 
     if (values == null) {
@@ -48,6 +49,7 @@ public class MultiValueMap010<K, V> {
   }
 
   protected void setLock(Lock lock) {
+      System.out.println( "Called set lock" );
     _lock = lock;
   }
 }

@@ -112,11 +112,12 @@ public class MultiValueMap009SpockTest extends Specification {
     MockLock009 mockLock = new MockLock009();
     _map.setLock(mockLock);
 
+    expect:
     mga.that(!mockLock.locked);
     mga.that(!mockLock.unlocked);
 
     _map.put("3", "three");
-
+  
     // mga.that(mockLock.locked);
     mga.that(mockLock.unlocked);
   }

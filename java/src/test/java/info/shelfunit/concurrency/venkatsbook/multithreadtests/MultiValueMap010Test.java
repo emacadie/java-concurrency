@@ -79,6 +79,7 @@ public class MultiValueMap010Test extends TestCase {
     final MockLock mockLock = new MockLock();
     MultiValueMap010<String, String> map = new MultiValueMap010<String, String>() {
       @Override protected void putValueForAKey(String key, String value) {
+	  System.out.println( "In putValueForAKey in Java test, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
         assertTrue(mockLock.locked);
         assertFalse(mockLock.unlocked);
       }
