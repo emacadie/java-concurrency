@@ -25,7 +25,7 @@ class MockLockSeparate extends ReentrantLock {
 
     @Override public void unlock() { 
       unlocked = true;
-      println("called MockLockSeparate.unlock, unlocked = " + unlocked + " locked = " + locked)
+      println("called MockLockSeparate.unlock, locked = " + locked + " unlocked = " + unlocked)
     }
 }
 

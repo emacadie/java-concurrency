@@ -27,17 +27,17 @@ public class MultiValueMap002SpockTest extends Specification {
 
   def "test Map Empty Upon Create"() {
     expect:
-    mgu.equals(0, _map.getSize());
+    0 == _map.getSize()
   }
 
   def "test Get Value For Non Existent Key"() {
     expect:
-    mgu.equals(0, _map.getValues("nope").size());
+    0 ==  _map.getValues("nope").size()
   }
   
   def "test Put One Value For A Key"() {
     _map.put("1", "one");
     expect:
-    mgu.equals("one", _map.getValues("1").get(0));
+    "one" ==  _map.getValues("1").get(0)
   }
 }

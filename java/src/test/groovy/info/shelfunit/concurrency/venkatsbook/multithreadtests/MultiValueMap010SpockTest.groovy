@@ -26,26 +26,26 @@ public class MultiValueMap010SpockTest extends Specification {
 
   def "test Map Empty Upon Create"() { 
     expect:
-    mgu.equals(0, _map.getSize());
+    0 == _map.getSize()
   }
 
   def "test Get Value For Non Existent Key"() { 
     expect:
-    mgu.equals(0, _map.getValues("nope").size());
+    0 == _map.getValues("nope").size()
   }
   
   def "test Put One Value For A Key"() { 
     _map.put("1", "one");
   
     expect:
-    mgu.equals("one", _map.getValues("1").get(0));
+    "one" == _map.getValues("1").get(0)
   }
 
   def "test Put Value For Another Key"() { 
     _map.put("2", "two");
     
     expect:
-    mgu.equals("two", _map.getValues("2").get(0));
+    "two" == _map.getValues("2").get(0)
   }
 
   def "test Two Values For One Key"() { 
@@ -53,8 +53,8 @@ public class MultiValueMap010SpockTest extends Specification {
     _map.put("1", "uno");
 
     expect:
-    mgu.equals("one", _map.getValues("1").get(0));
-    mgu.equals("uno", _map.getValues("1").get(1));
+    "one" == _map.getValues("1").get(0)
+    "uno" == _map.getValues("1").get(1)
   }
   
   def "test Check Size After Puts"() { 
@@ -63,7 +63,7 @@ public class MultiValueMap010SpockTest extends Specification {
     _map.put("1", "uno");
 
     expect:
-    mgu.equals(2, _map.getSize());
+    2 == _map.getSize()
   }
   
   def "test Ensure Get Values Returns Synchronized List"() { 
@@ -71,7 +71,7 @@ public class MultiValueMap010SpockTest extends Specification {
     List<String> values = _map.getValues("1");
     
     expect:
-    mgu.equals(Collections.synchronizedList(values).getClass(), values.getClass());
+    Collections.synchronizedList(values).getClass() == values.getClass()
 
   }
 
@@ -95,13 +95,14 @@ public class MultiValueMap010SpockTest extends Specification {
     _map.setLock(mockLock);
 
     expect:
-    mga.that(!mockLock.locked);
-    mga.that(!mockLock.unlocked);
+    !mockLock.locked
+    !mockLock.unlocked
 
+    when:
     _map.put("3", "three");
-
-    // mga.that(mockLock.locked);
-    mga.that(mockLock.unlocked);
+    then:
+    !mockLock.locked
+    mockLock.unlocked
   }
 
 
@@ -118,23 +119,23 @@ public class MultiValueMap010SpockTest extends Specification {
 	println("In overriding method, mockLock.unlocked -> " + mockLock.unlocked)
 	println("mockLock.class.name: " + mockLock.class.name )
         expect:
-        // mga.that(mockLock.locked);
-        mga.that(!mockLock.unlocked);
+        mockLock.locked
+        !mockLock.unlocked
       }
     };
   
     when:
     map.setLock(mockLock);
     then:
-    mga.that(!mockLock.locked);
-    mga.that(!mockLock.unlocked);
+    !mockLock.locked
+    !mockLock.unlocked
 
     when:
     println("About to call put")
     map.put("3", "three");
     then:
-    // mga.that(mockLock.locked);
-    mga.that(mockLock.unlocked);
+    !mockLock.locked
+    mockLock.unlocked
   }
 
 }

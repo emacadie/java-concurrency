@@ -24,7 +24,7 @@ public class MultiValueMap001SpockTest extends Specification {
 
   def "test Map Empty Upon Create"() {
     expect:
-    mgu.equals(0, _map.getSize());
+    0 == _map.getSize()
   }
 }
 

@@ -83,16 +83,16 @@ public class MultiValueMap008Test extends TestCase {
   public void testPutIsMutuallyExclusive() {
     MockLock mockLock = new MockLock();
     _map.setLock(mockLock);
-    // System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
+    System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
     assertFalse(mockLock.locked);
-    // System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
+    System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
     assertFalse(mockLock.unlocked);
-    // System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
+    System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
     
     _map.put("3", "three");
-    // System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
+    System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
     assertTrue(mockLock.locked);
-    // System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
+    System.out.println( "In Java, mockLock.locked: " + mockLock.locked + " mockLock.unlocked: " + mockLock.unlocked  );
     assertTrue(mockLock.unlocked);
   }
 }
