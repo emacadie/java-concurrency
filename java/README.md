@@ -83,6 +83,9 @@ gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.DataFl
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.FileSize -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MyActorRunner     
 
+To run the ClosureLock class:    
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.locks.FirstLockRunner    
+
 Code in the info.shelfunit.concurrency.venkatsbook.multithreadtests package is from "Test Driving Multithreaded Code" at http://www.agiledeveloper.com/downloads.html     
 
 The Java 7 Concurrency Cookbook:    
