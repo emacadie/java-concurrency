@@ -1,0 +1,1 @@
+The main class is TestingRunner. It starts an Akka actor system, and calls a MyActor actor.
