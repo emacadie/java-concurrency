@@ -1,0 +1,1 @@
+This is code from chapter 2 of Programming Concurrency on the JVM by Venkat Subramaniam. I really do not have a lot of interest in writing about this right now. It's kind of low-level Java stuff, not what he talks about in the rest of the book.   
