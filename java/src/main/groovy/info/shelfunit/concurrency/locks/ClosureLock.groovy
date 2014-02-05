@@ -7,7 +7,7 @@ class ClosureLock {
     
     Lock lock = new ReentrantLock()
     try { 
-      println("about to try to get the clock")
+      println("about to try to get the lock")
       if (lock.tryLock() || lock.tryLock(500, TimeUnit.MILLISECONDS)) {
 	block.call()
       }

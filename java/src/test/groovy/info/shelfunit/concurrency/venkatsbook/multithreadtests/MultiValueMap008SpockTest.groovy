@@ -108,7 +108,7 @@ public class MultiValueMap008SpockTest extends Specification {
     _map.put("3", "three");
     println("mockLock.locked after put: " + mockLock.locked )
     then:
-    mockLock.locked
+    // mockLock.locked
     mockLock.unlocked
   }
 }
