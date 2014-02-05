@@ -6,7 +6,7 @@ UseSeparateEnergySource.java calls SeparateEnergySource.java. The calls to STM.a
 
 Likewise, UseMultiverseEnergySource.java calls MultiverseEnergySource.java, which calls MultiverseReplenish.java and MultiverseUseEnergy.java. I think that MultiverseUseEnergy.java should probably be given another name. So should CallableUseEnergy. Perhaps MultiverseEnergyUser and CallableEnergyUser.  
 
-
+I shall have to study these further. It looks like all the fields are updated in all three ways of doing this, even though in the second two the variables are sent as arguments to other classes.  
 
 
 
