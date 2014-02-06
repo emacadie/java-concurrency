@@ -1,9 +1,5 @@
 Look through stm/ first.    
 Next is nested/    
 Next is events/    
-
-collections/    
-
-
-
-writeSkew/    
+Next is collections/    
+Last is writeSkew/    
