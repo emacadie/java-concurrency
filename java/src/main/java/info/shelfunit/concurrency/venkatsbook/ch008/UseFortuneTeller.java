@@ -16,13 +16,13 @@ import java.util.UUID;
 public class UseFortuneTeller {
 
     public static void main( final String[] args ) throws InterruptedException {
-	ActorSystem system = ActorSystem.create("This-seems-like-a-lot-of-work");
-	final ActorRef gypsyLady = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
-	final ActorRef gypsyLady02 = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
+	ActorSystem system = ActorSystem.create( "This-seems-like-a-lot-of-work" );
+	final ActorRef gypsyLady   = system.actorOf( Props.create( FortuneTeller.class ), UUID.randomUUID().toString() );
+	final ActorRef gypsyLady02 = system.actorOf( Props.create( FortuneTeller.class ), UUID.randomUUID().toString() );
 
 	final ArrayList< Future< Object > > futures = new ArrayList< Future< Object > >();
-	futures.add( Patterns.ask(gypsyLady, "Hello", 1000) );
-	futures.add( Patterns.ask(gypsyLady02, "Hello again", 1000) );
+	futures.add( Patterns.ask( gypsyLady, "Hello", 1000 ) );
+	futures.add( Patterns.ask( gypsyLady02, "Hello again", 1000 ) );
 
 	System.out.println( "Size of futures: " + futures.size() );
 	System.out.println( "-----------------------------------" );
@@ -31,8 +31,8 @@ public class UseFortuneTeller {
 	try {
 	    Timeout timeout = new Timeout( 5 * 1000 );
 	    // Timeout timeout = new Timeout(Duration.create( 5, "seconds") );
-	    final ActorRef gypsyLady03 = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
-	    final ActorRef gypsyLady04 = system.actorOf(Props.create(FortuneTeller.class), UUID.randomUUID().toString());
+	    final ActorRef gypsyLady03 = system.actorOf( Props.create( FortuneTeller.class ), UUID.randomUUID().toString() );
+	    final ActorRef gypsyLady04 = system.actorOf( Props.create( FortuneTeller.class ), UUID.randomUUID().toString() );
 	    final ArrayList< String > futureStrings = new ArrayList< String >();
 	    System.out.println( "About to ask gypsyLady03" );
 	    Future< Object > future03 = Patterns.ask( gypsyLady03, "Hello03", 3 * 1000 );

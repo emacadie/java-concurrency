@@ -61,9 +61,9 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHolly
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseHollywoodActorWithParams     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.UseFortuneTeller002     
-gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100"      
-gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes002 -PmainArgs="10000000 100"      
-gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100"      
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100 30"      
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes002 -PmainArgs="10000000 100 30"      
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 100 30"      
 That should give  664579    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWAkka -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
