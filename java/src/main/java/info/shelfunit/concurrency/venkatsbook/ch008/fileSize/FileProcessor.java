@@ -27,7 +27,7 @@ public class FileProcessor extends UntypedActor {
 	final FileToProcess fileToProcess = ( FileToProcess ) message;
 	// orig: final File file = new File( fileToProcess.fileName );
 	if ( message instanceof FileToProcess ) {
-	    // System.out.println( "here is the fileName: " + ((FileToProcess)message).fileName );
+	    // System.out.println( "here is the fileName: " + ( ( FileToProcess )message ).fileName );
 	}
 	final File file = new File( fileToProcess.fileName );
 	long size = 0L;
@@ -38,15 +38,16 @@ public class FileProcessor extends UntypedActor {
 	    File[] children = file.listFiles();
 	    if ( children != null ) {
 		for ( File child : children ) {
-		    if (child.isFile()) { size += child.length(); }
-		    else {
-			sizeCollector.tell(new FileToProcess(child.getPath()), getSelf() );
+		    if ( child.isFile() ) { 
+			size += child.length(); 
+		    } else {
+			sizeCollector.tell( new FileToProcess( child.getPath() ), getSelf() );
 		    }
 		}
 	    }
 	} // if ( file.isFile() )
 
-	sizeCollector.tell( new FileSize(size), getSelf() );
+	sizeCollector.tell( new FileSize( size ), getSelf() );
 	registerToGetFile();
 	// } // if (message instanceof)
     } // onReceive

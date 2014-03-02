@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SizeCollector extends UntypedActor {
-
+    // these are created and initialized upon instantiation
     private final List< String > toProcessFileNames = new ArrayList< String >();
     private final List< ActorRef > idleFileProcessors = new ArrayList< ActorRef >();
     private long pendingNumberOfFilesToVisit = 0L;
@@ -16,7 +16,7 @@ public class SizeCollector extends UntypedActor {
 
     public void sendAFileToProcess() {
 	if ( !toProcessFileNames.isEmpty() && !idleFileProcessors.isEmpty() ) {
-	    idleFileProcessors.remove(0).tell( new FileToProcess( toProcessFileNames.remove(0)), getSelf()  );
+	    idleFileProcessors.remove( 0 ).tell( new FileToProcess( toProcessFileNames.remove( 0 ) ), getSelf()  );
 	}
     } // sendAFileToProcess
 

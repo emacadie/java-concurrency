@@ -25,5 +25,6 @@ transactors/
 typed01/
 typed02/
 
+It looks like that for Akka actors that one of the arguments to the tell method to send a message is the instance itself. For some reason, that seems a bit odd to me. I do not like littering the onReceive method with a lot of if (message instanceOf XXX) statements. I like the way GPars DynamicDispatchActor classes can overload the onMessage method. It is not quite as idiomatic as the loop { react { } } closures in DefaultActor. But nested closures can get pretty deep.     
 
 
