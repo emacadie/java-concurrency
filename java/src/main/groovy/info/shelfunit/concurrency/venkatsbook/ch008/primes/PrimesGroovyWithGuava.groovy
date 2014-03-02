@@ -12,17 +12,19 @@ import info.shelfunit.util.ClassUtil;
 
 public class PrimesGroovyWithGuava extends DynamicDispatchActor {
 
+   
     public void onMessage( ImmutableList boundsList ) {
 
         println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
         println( "boundsList is a " + boundsList.getClass().getName() );
         def count = 0
-        // final List< Integer > bounds = ImmutableList.class.cast( boundsList);
-        count = this.countPrimesInRange( bounds.get( 0 ), bounds.get(1) );
+        
+        count = this.countPrimesInRange( boundsList.get( 0 ), boundsList.get( 1 ) );
         reply count
         
-    } // end onReceive
-    
+    } // end onMessage
+  
+    /*
     public void onMessage( List boundsList ) {
 
         println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
@@ -33,7 +35,8 @@ public class PrimesGroovyWithGuava extends DynamicDispatchActor {
         reply count
         
     } // end onReceive
-    
+    */
+    /*
     public void onMessage( RegularImmutableList boundsList ) {
 
         println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
@@ -43,8 +46,9 @@ public class PrimesGroovyWithGuava extends DynamicDispatchActor {
         count = this.countPrimesInRange( boundsList.get( 0 ), boundsList.get( 1 ) );
         reply count
         
-    } // end onReceive
-    
+    } // end onMessage
+    */
+    /*
     public void onMessage( Object boundsList ) {
 
         println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
@@ -55,7 +59,7 @@ public class PrimesGroovyWithGuava extends DynamicDispatchActor {
         reply count
         
     } // end onReceive
-
+    */
     private boolean isPrime( final int number ) {
         if ( number <= 1 ) {
             return false;
@@ -81,3 +85,4 @@ public class PrimesGroovyWithGuava extends DynamicDispatchActor {
     } // countPrimesInRange()
 
 } // end PrimesWithGuava
+
