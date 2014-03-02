@@ -11,9 +11,9 @@ Next is the actor FortuneTeller.java. It calls getSender() to get the caller, an
 
 
 
-primes/ are next.    
+The directory primes/ is next.    
 
-fileSize/
+The directory fileSize/ is next.
 
 gpars/
 

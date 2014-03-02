@@ -8,6 +8,19 @@ PrimesWithGuava.java uses the Guava library to make the args to the actors immut
 
 The three classes do not give the same answer for the same arguments, so I guess I did something wrong. Perhaps because there is a different value in the calls to Pattern.ask for the timeout argument. I will make it a command line arg.      
 
+That did not help. Perhaps I can finish this some other time.    
+
+All these give 664579    
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimes -PmainArgs="10000000 100 30"     
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithGuava -PmainArgs="10000000 15 30"    
+gradle runjava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithFinder -PmainArgs="10000000 15 30"     
+
+More chunks gives a lower number. At some point I could refactor it to call scala.concurrent.Future.isCompleted in the loop. Or do it with GPars.     
+
+There are values here: http://primes.utm.edu/howmany.shtml   
+
+
+
 
 
 

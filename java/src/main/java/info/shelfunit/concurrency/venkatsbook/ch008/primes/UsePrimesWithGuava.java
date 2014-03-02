@@ -23,7 +23,7 @@ public class UsePrimesWithGuava {
 	} else {
 	    try {
 		final long start = System.nanoTime();
-		final long count = countPrimes( Integer.parseInt( args[0] ), Integer.parseInt(args[ 1 ]) );
+		final long count = countPrimes( Integer.parseInt( args[ 0 ] ), Integer.parseInt( args[ 1 ] ), Integer.parseInt( args[2 ] ) );
 		final long end = System.nanoTime();
 		System.out.println( "Number of Primes is " + count );
 		System.out.println( "Time taken: " + (end/start)/1.0e9 );
@@ -33,7 +33,7 @@ public class UsePrimesWithGuava {
 
     } // end method main
 
-    public static int countPrimes(final int number, final int numberOfParts)
+    public static int countPrimes( final int number, final int numberOfParts, final int patternTimeout )
     throws InterruptedException {
 	ActorSystem system = ActorSystem.create("This-seems-like-a-lot-of-work");
 	Timeout timeout = new Timeout( 5 * 1000 );
@@ -48,8 +48,8 @@ public class UsePrimesWithGuava {
 		.build();
 
 	    final ActorRef primeFinder = system.actorOf(Props.create(PrimesWithGuava.class), UUID.randomUUID().toString());
-	    results.add( Patterns.ask(primeFinder, bounds2, (2 * 1000) ) );
-	    Thread.sleep( 1 * 1000 );
+	    results.add( Patterns.ask(primeFinder, bounds2, ( patternTimeout * 1000) ) );
+	    // Thread.sleep( 1 * 1000 );
 	} // for ( int index = 0; index < numberOfParts; index++ )
  
 	int count = 0;
