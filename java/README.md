@@ -69,6 +69,7 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.typed01.UseEnergySource    
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.gpars.UseFortuneTellerGPars    
 
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesWithGuava -PmainArgs="10000000 100 30"      
 
 Venkat, Chapter 09:
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.HollywoodActorRunner         

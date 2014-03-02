@@ -28,7 +28,7 @@ public class UsePrimes {
 	    final long count = countPrimes( Integer.parseInt( args[ 0 ] ), Integer.parseInt( args[ 1 ] ), Integer.parseInt( args[2 ] ) );
 	    final long end = System.nanoTime();
 	    System.out.println( "Number of Primes is " + count );
-	    System.out.println( "Time taken: " + (end/start)/1.0e9 );
+	    System.out.println( "Time taken: " + (end - start)/1.0e9 );
 	} // if ( args.length < 2 ) 
 
     } // end method main
