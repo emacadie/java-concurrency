@@ -52,9 +52,9 @@ public class UsePrimesWithGuava {
                 upper = lower + chunksPerPartition - 1
             }
             
-            final List< Integer > bounds2 =  new ImmutableList.Builder< Integer >()
-            .add(lower)
-            .add(upper)
+            def bounds2 =  new ImmutableList.Builder< Integer >()
+            .add( lower )
+            .add( upper )
             .build();
     
             final  primeFinder = new PrimesGroovyWithGuava().start()

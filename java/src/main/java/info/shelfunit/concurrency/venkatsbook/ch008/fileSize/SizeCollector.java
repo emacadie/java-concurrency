@@ -8,7 +8,9 @@ import java.util.List;
 
 public class SizeCollector extends UntypedActor {
     // these are created and initialized upon instantiation
+    // a list of files/directories to process
     private final List< String > toProcessFileNames = new ArrayList< String >();
+    
     private final List< ActorRef > idleFileProcessors = new ArrayList< ActorRef >();
     private long pendingNumberOfFilesToVisit = 0L;
     private long totalSize = 0L;
@@ -21,7 +23,9 @@ public class SizeCollector extends UntypedActor {
     } // sendAFileToProcess
 
     public void onReceive( final Object message ) {
+	
 	if ( message instanceof RequestAFile ) {
+	    // the sender is a FileProcessor
 	    idleFileProcessors.add( getSender() );
 	    sendAFileToProcess();
 	}
