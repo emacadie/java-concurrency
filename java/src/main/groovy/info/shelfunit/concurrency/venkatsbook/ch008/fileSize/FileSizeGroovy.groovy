@@ -2,7 +2,7 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
 public class FileSizeGroovy {
 
-    final long size;
+    public final long size;
 
     public FileSizeGroovy( final long fileSize ) {
         size = fileSize;

@@ -1,54 +1,55 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-import groovyx.gpars.actor.DynamicDispatchActor
+import akka.actor.ActorRef;
+import akka.actor.UntypedActor;
 
 import java.io.File;
 
-public class FileProcessorGroovy extends DynamicDispatchActor {
+public class FileProcessorGroovy extends UntypedActor {
 
-    def sizeCollector;
-    
-    void setSizeCollector( sc ) {  }
-    
-    public FileProcessorGroovy( theSizeCollector ) {
+    private final ActorRef sizeCollector;
+
+    public FileProcessor( final ActorRef theSizeCollector ) {
         sizeCollector = theSizeCollector;
-        println( "sizeCollector is a ${sizeCollector.getClass().getName()}" )
-        registerToGetFile()
     }
 
-    void registerToGetFile() {
-        sizeCollector.send( this ) // new RequestAFileGroovy() );
+    @Override
+    public void preStart() {
+        registerToGetFile();
     }
 
-    void onMessage( FileToProcessGroovy ftpG ) {
+    public void registerToGetFile() {
+        sizeCollector.tell( new RequestAFile(), getSelf() );
+    }
+
+    public void onReceive( final Object message ) {
+
+        if ( message instanceof FileToProcess ) {
+            FileToProcess fileToProcess = ( FileToProcess ) message;
+            // System.out.println( "here is the fileName: " + ( ( FileToProcess )message ).fileName );
         
-        println( "here is the fileName: " + ftpG.fileName );
-    
-        final File file = new File( ftpG.fileName ); // new File( ( ( FileToProcess )message ).fileName );
-        long size = 0L;
-    
-        if ( file.isFile() ) {
-            size = file.length();
-        } else {
-            File[] children = file.listFiles();
-            if ( children != null ) {
-                for ( File child : children ) {
-                    if ( child.isFile() ) { 
-                        size += child.length();
-                        
-                    } else {
-                        ftpG = new FileToProcessGroovy( child.getPath() )
-                        // ftpG.parallelGroup = this.parallelGroup
-                        sizeCollector.send( ftpG );
+            final File file = new File( fileToProcess.fileName ); // new File( ( ( FileToProcess )message ).fileName );
+            long size = 0L;
+        
+            if ( file.isFile() ) {
+                size = file.length();
+            } else {
+                File[] children = file.listFiles();
+                if ( children != null ) {
+                    for ( File child : children ) {
+                        if ( child.isFile() ) { 
+                            size += child.length(); 
+                        } else {
+                            sizeCollector.tell( new FileToProcess( child.getPath() ), getSelf() );
+                        }
                     }
                 }
-            }
-        } // if ( file.isFile() )
+            } // if ( file.isFile() )
+        
+            sizeCollector.tell( new FileSize( size ), getSelf() );
+            registerToGetFile();
+        } // if (message instanceof)
+    } // onReceive
     
-        sizeCollector.send( new FileSizeGroovy( size ) );
-        registerToGetFile();
-      
-    } // onMessage
-    
-} // end FileProcessorGroovy - line 54
+} // end FileProcessor - line 54
 

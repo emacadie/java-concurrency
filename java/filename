@@ -1,0 +1,60 @@
+-- Groovy version: 1.8.6
+null
+-- Groovy version: 1.8.6
+configProperties is a java.util.LinkedHashMap
+:compileJava/home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/primes/Primes.java:16: warning: [unchecked] unchecked cast
+	    final List< Integer > bounds = ( List< Integer > ) boundsList;
+	                                                       ^
+  required: List<Integer>
+  found:    Object
+/home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/primes/PrimesWithGuava.java:17: warning: [unchecked] unchecked conversion
+	    final List< Integer > bounds = ImmutableList.class.cast( boundsList);
+	                                                           ^
+  required: List<Integer>
+  found:    ImmutableList
+/home/ericm/github/java-concurrency/java/src/main/java/info/shelfunit/concurrency/venkatsbook/ch008/primes/PrimesWithFinder.java:15: warning: [unchecked] unchecked cast
+	    final List< Integer > bounds = ( List< Integer > ) boundsList;
+	                                                       ^
+  required: List<Integer>
+  found:    Object
+3 warnings
+
+:compileGroovy
+:processResources UP-TO-DATE
+:classes
+:runGroovy
+Here is the arg: /home/ericm/github
+in the loop of ConcurrentFileSizeWAkka, and i == 0
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 1
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 2
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 3
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 4
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 5
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 6
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 7
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 8
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+in the loop of ConcurrentFileSizeWAkka, and i == 9
+In constructor for FileProcessorGroovy and sizeCollector is info.shelfunit.concurrency.venkatsbook.ch008.fileSize.SizeCollectorGroovy
+In registerToGetFile
+
+BUILD SUCCESSFUL
+
+Total time: 14.131 secs

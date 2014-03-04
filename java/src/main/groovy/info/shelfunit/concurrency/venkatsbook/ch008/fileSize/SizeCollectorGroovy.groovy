@@ -1,65 +1,52 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-import groovyx.gpars.actor.DynamicDispatchActor
+import akka.actor.ActorRef;
+import akka.actor.UntypedActor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SizeCollectorGroovy extends DynamicDispatchActor {
+public class SizeCollectorGroovy extends UntypedActor {
     // these are created and initialized upon instantiation
     // a list of files/directories to process
-    private final toProcessFileNames = [];
+    private final List< String > toProcessFileNames = new ArrayList< String >();
     
-    private final idleFileProcessors = [];
+    private final List< ActorRef > idleFileProcessors = new ArrayList< ActorRef >();
     private long pendingNumberOfFilesToVisit = 0L;
     private long totalSize = 0L;
     private long start = System.nanoTime();
 
-    void sendAFileToProcess() {
-        if ( !toProcessFileNames.isEmpty() && !idleFileProcessors.isEmpty() ) {
-            println( "toProcessFileNames[ 0 ]: ${toProcessFileNames[ 0 ]}"  )
-            def ftpG = new FileToProcessGroovy( toProcessFileNames.remove( 0 ) )
-            // println( "idleFileProcessors is a ${idleFileProcessors.getClass().getName()} size: ${idleFileProcessors.size}" )
-            def first = idleFileProcessors.remove( 0 )
-            println( "first is a ${first.getClass().getName()}" )
-            first.send( ftpG )
-            // idleFileProcessors.remove( 0 ).send( );
-        }
+    public void sendAFileToProcess() {
+	if ( !toProcessFileNames.isEmpty() && !idleFileProcessors.isEmpty() ) {
+	    idleFileProcessors.remove( 0 ).tell( new FileToProcess( toProcessFileNames.remove( 0 ) ), getSelf()  );
+	}
     } // sendAFileToProcess
+
+    public void onReceive( final Object message ) {
 	
-	void onMessage( RequestAFileGroovy rafG ) {
+	if ( message instanceof RequestAFile ) {
 	    // the sender is a FileProcessor
-	    // def sender = getSender()
-	    // println("idleFileProcessors sender is a " + sender.class.name)
-	    println( "sender is a ${sender.getClass().getName()}" )
 	    idleFileProcessors.add( getSender() );
 	    sendAFileToProcess();
 	}
-	
-	void onMessage( FileProcessorGroovy message ) {
-	    println( "SizeCollectorGroovy got a message that is a ${message.getClass().getName()}" )
-	    idleFileProcessors.add( message );
-	    sendAFileToProcess();
-	}
-	
-	void onMessage( FileToProcessGroovy ftpG ) {
-	    toProcessFileNames.add( ftpG.fileName );
+	if ( message instanceof FileToProcess ) {
+	    toProcessFileNames.add( ( ( FileToProcess ) message ).fileName );
 	    pendingNumberOfFilesToVisit += 1;
 	    sendAFileToProcess();
 	}
 
-	void onMessage( FileSizeGroovy fsg ) {
-	    totalSize += fsg.size;
+	if ( message instanceof FileSize ) {
+	    totalSize += ( ( FileSize )( message ) ).size;
 	    pendingNumberOfFilesToVisit -= 1;
-	    println( "pendingNumberOfFilesToVisit: ${pendingNumberOfFilesToVisit}" )
 	    if ( pendingNumberOfFilesToVisit == 0 ) {
-            long end = System.nanoTime();
-            println( "Total size is: " + totalSize );
-            println( "Time taken is: " + ( end - start )/1.0e9  );
-            this.parallelGroup.shutdown();
+		long end = System.nanoTime();
+		System.out.println( "Total size is: " + totalSize );
+		System.out.println( "Time taken is: " + ( end - start )/1.0e9  );
+		getContext().system().shutdown();
 	    }
+	}
 
-    } // onMessage
+    } // onReceive
     
-} // end SizeCollectorGroovy - line 53
+} // end SizeCollector - line 51
 

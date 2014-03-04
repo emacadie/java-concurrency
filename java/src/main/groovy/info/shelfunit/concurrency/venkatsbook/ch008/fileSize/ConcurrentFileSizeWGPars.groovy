@@ -1,29 +1,28 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-import groovyx.gpars.group.DefaultPGroup
-import groovyx.gpars.actor.DynamicDispatchActor
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
 
 public class ConcurrentFileSizeWGPars {
 
-    public static void startFileProcessor( pGroup, sizeCollector ) {
+    public static void startFileProcessor( ActorSystem system, ActorRef sizeCollector ) {
         for ( int i = 0; i < 10; i++ ) {
-            println( "in the loop of ConcurrentFileSizeWAkka, and i == " + i );
-            final fileProcessor = new FileProcessorGroovy( sizeCollector ).start() 
-            // fileProcessor.send( sizeCollector );
-            fileProcessor.parallelGroup = pGroup
+            System.out.println( "in the loop of ConcurrentFileSizeWAkka, and i == " + i );
+            final ActorRef fileProcessor = system.actorOf( Props.create( FileProcessor.class, sizeCollector ) );
+            fileProcessor.tell( sizeCollector, fileProcessor );
         }
     } // end startFileProcessor
 
     public static void main( final String[] args ) {
 	
-        def pGroup = new DefaultPGroup()
-        final sizeCollector = new SizeCollectorGroovy().start()
-        sizeCollector.parallelGroup = pGroup
-        println( "Here is the arg: " + args[ 0 ] );
-        sizeCollector.send( new FileToProcessGroovy( args[ 0 ] ) );
-        startFileProcessor( pGroup, sizeCollector );
+        ActorSystem system = ActorSystem.create( "Get-the-size" );
+        final ActorRef sizeCollector = system.actorOf( Props.create( SizeCollector.class ) );
+        System.out.println( "Here is the arg: " + args[ 0 ] );
+        sizeCollector.tell( new FileToProcess( args[ 0 ] ), sizeCollector );
+        startFileProcessor( system, sizeCollector );
 		
     } // end main
 
-} // ConcurrentFileSizeWGPars - line 31
+} // ConcurrentFileSizeWAkka - line 27
 
