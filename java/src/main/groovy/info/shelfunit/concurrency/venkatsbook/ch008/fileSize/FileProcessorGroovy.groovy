@@ -2,15 +2,16 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
 import akka.actor.ActorRef;
 import akka.actor.UntypedActor;
-
+import groovyx.gpars.actor.DynamicDispatchActor
 import java.io.File;
 
-public class FileProcessorGroovy extends UntypedActor {
+public class FileProcessorGroovy extends DynamicDispatchActor {
 
-    private final ActorRef sizeCollector;
+    def sizeCollector;
 
-    public FileProcessor( final ActorRef theSizeCollector ) {
+    public FileProcessorGroovy( theSizeCollector ) {
         sizeCollector = theSizeCollector;
+        registerToGetFile()
     }
 
     @Override
@@ -19,37 +20,36 @@ public class FileProcessorGroovy extends UntypedActor {
     }
 
     public void registerToGetFile() {
-        sizeCollector.tell( new RequestAFile(), getSelf() );
+        // sizeCollector.send( new RequestAFileGroovy() );
+        sizeCollector.send( this );
     }
 
-    public void onReceive( final Object message ) {
-
-        if ( message instanceof FileToProcess ) {
-            FileToProcess fileToProcess = ( FileToProcess ) message;
-            // System.out.println( "here is the fileName: " + ( ( FileToProcess )message ).fileName );
-        
-            final File file = new File( fileToProcess.fileName ); // new File( ( ( FileToProcess )message ).fileName );
-            long size = 0L;
-        
-            if ( file.isFile() ) {
-                size = file.length();
-            } else {
-                File[] children = file.listFiles();
-                if ( children != null ) {
-                    for ( File child : children ) {
-                        if ( child.isFile() ) { 
-                            size += child.length(); 
-                        } else {
-                            sizeCollector.tell( new FileToProcess( child.getPath() ), getSelf() );
-                        }
+    void onMessage( FileToProcessGroovy message ) {
+        // FileToProcess fileToProcess = ( FileToProcess ) message;
+        // System.out.println( "here is the fileName: " + ( ( FileToProcess )message ).fileName );
+    
+        final File file = new File( message.fileName ); // new File( ( ( FileToProcess )message ).fileName );
+        long size = 0L;
+    
+        if ( file.isFile() ) {
+            size = file.length();
+        } else {
+            File[] children = file.listFiles();
+            if ( children != null ) {
+                for ( File child : children ) {
+                    if ( child.isFile() ) { 
+                        size += child.length(); 
+                    } else {
+                        sizeCollector.send( new FileToProcessGroovy( child.getPath() ) );
                     }
                 }
-            } // if ( file.isFile() )
-        
-            sizeCollector.tell( new FileSize( size ), getSelf() );
-            registerToGetFile();
-        } // if (message instanceof)
-    } // onReceive
+            }
+        } // if ( file.isFile() )
+    
+        sizeCollector.send( new FileSizeGroovy( size ) );
+        registerToGetFile();
+    } // if (message instanceof)
+   
     
 } // end FileProcessor - line 54
 

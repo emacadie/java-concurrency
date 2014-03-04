@@ -4,23 +4,29 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
+import groovyx.gpars.group.DefaultPGroup
+import groovyx.gpars.actor.DynamicDispatchActor
+
 public class ConcurrentFileSizeWGPars {
 
-    public static void startFileProcessor( ActorSystem system, ActorRef sizeCollector ) {
+    public static void startFileProcessor( group, sizeCollector ) {
         for ( int i = 0; i < 10; i++ ) {
-            System.out.println( "in the loop of ConcurrentFileSizeWAkka, and i == " + i );
-            final ActorRef fileProcessor = system.actorOf( Props.create( FileProcessor.class, sizeCollector ) );
-            fileProcessor.tell( sizeCollector, fileProcessor );
+            System.out.println( "in the loop of ConcurrentFileSizeWGPars, and i == " + i );
+            def fileProcessor = new FileProcessorGroovy( sizeCollector ).start()
+            fileProcessor.parallelGroup = group
+            // fileProcessor.send( sizeCollector, fileProcessor );
         }
     } // end startFileProcessor
 
     public static void main( final String[] args ) {
 	
         ActorSystem system = ActorSystem.create( "Get-the-size" );
-        final ActorRef sizeCollector = system.actorOf( Props.create( SizeCollector.class ) );
+        def group = new DefaultPGroup()
+        def sizeCollector = new SizeCollectorGroovy().start()
+        sizeCollector.parallelGroup = group
         System.out.println( "Here is the arg: " + args[ 0 ] );
-        sizeCollector.tell( new FileToProcess( args[ 0 ] ), sizeCollector );
-        startFileProcessor( system, sizeCollector );
+        sizeCollector.send( new FileToProcessGroovy( args[ 0 ] ) );
+        startFileProcessor( group, sizeCollector );
 		
     } // end main
 
