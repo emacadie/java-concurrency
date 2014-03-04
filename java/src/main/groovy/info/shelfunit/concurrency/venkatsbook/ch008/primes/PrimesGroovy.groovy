@@ -2,7 +2,6 @@ package info.shelfunit.concurrency.venkatsbook.ch008.primes;
 
 import groovyx.gpars.actor.DynamicDispatchActor
 
-
 import akka.actor.UntypedActor;
 import java.util.List;
 import info.shelfunit.util.ClassUtil;
