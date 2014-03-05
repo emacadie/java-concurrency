@@ -1,4 +1,6 @@
-This is another set of files to get the file size of a directory tree.    
+This is another set of files to get the file size of a directory tree. It is a refactoring of the Akka code in Chapter 8.    
+
+I prefer extending the DynamicDispatchActor over DefaultActor. Some would say that DefaultActor is more idiomatic Groovy. Groovy DSLs are nice, but sometimes the indentation can get pretty crazy. You go three or four or more levels in and it looks a bit crazy. Plus it can just be hard to keep track of stuff in my opinion.    
 
 The main method is in ConcurrentFileSizeWAkka.java. It starts the Actor system and instantiates SizeCollector.java. It sends a message to SizeCollector with an instance of FileToProcess.java, which is the directory tree we are measuring. It then sends the SizeCollector and the ActorSystem to a method called startFileProcessor, which instantiates a FileProcessor.java, and sends it a message containing the SizeCollector.     
 
