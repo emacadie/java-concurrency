@@ -8,7 +8,6 @@ import groovyx.gpars.actor.DynamicDispatchActor
 public class SizeCollectorGroovy extends DynamicDispatchActor {
     // these are created and initialized upon instantiation
     // a list of files/directories to process
-    // private List< String > toProcessFileNames = new ArrayList< String >();
     def toProcessFileNames = []
     def idleFileProcessors = []
     private long pendingNumberOfFilesToVisit = 0L

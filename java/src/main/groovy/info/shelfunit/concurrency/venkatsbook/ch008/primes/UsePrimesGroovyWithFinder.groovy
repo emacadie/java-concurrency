@@ -1,12 +1,8 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.primes;
 
-import akka.actor.ActorRef;
-import akka.actor.ActorSystem;
-import akka.actor.Props;
+import groovyx.gpars.group.DefaultPGroup
+import groovyx.gpars.actor.DynamicDispatchActor
 
-import akka.pattern.Patterns;
-import scala.concurrent.Future;
-import akka.util.Timeout;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,59 +11,57 @@ import java.util.UUID;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 
-public class UsePrimesWithFinder {
+public class UsePrimesGroovyWithFinder {
 
     public static void main( final String[] args ) throws InterruptedException {
         if ( args.length < 2 ) {
             System.out.println( "Usage: number numberOfParts" );
         } else {
             try {
-                final long start = System.nanoTime();
-                final long count = countPrimes( Integer.parseInt( args[ 0 ] ), Integer.parseInt( args[ 1 ] ), Integer.parseInt( args[ 2 ] ) );
-                final long end = System.nanoTime();
-                System.out.println( "Number of Primes is " + count );
-                System.out.println( "Time taken: " + (end/start)/1.0e9 );
+                final long start = System.nanoTime()
+                def group = new DefaultPGroup()
+                final long count = countPrimes( Integer.parseInt( args[ 0 ] ), Integer.parseInt( args[ 1 ] ), Integer.parseInt( args[ 2 ] ), group )
+                final long end = System.nanoTime()
+                println( "Number of Primes is " + count )
+                println( "Time taken: " + (end - start)/1.0e9 )
+                group.shutdown()
             } catch ( InterruptedException e ) {
             }
         } // if ( args.length < 2 ) 
 
     } // end method main
 
-    public static int countPrimes(final int number, final int numberOfParts, final int patternTimeout )
+    public static int countPrimes(final int number, final int numberOfParts, final int patternTimeout, DefaultPGroup group )
     throws InterruptedException {
-        ActorSystem system = ActorSystem.create("This-seems-like-a-lot-of-work");
-        Timeout timeout = new Timeout( 5 * 1000 );
+        
         final int chunksPerPartition = number / numberOfParts;
-        final List< Future< Object > > results = new ArrayList< Future< Object > >();
+        def results = []
         for ( int index = 0; index < numberOfParts; index++ ) {
             final int lower = index * chunksPerPartition + 1;
             final int upper = (index == numberOfParts - 1) ? number : lower + chunksPerPartition - 1;
-            final List< Integer > bounds = Collections.unmodifiableList( Arrays.asList(lower, upper) );
-            final ActorRef primeFinder = system.actorOf(Props.create(PrimesWithFinder.class), UUID.randomUUID().toString());
-            results.add( Patterns.ask(primeFinder, bounds, ( patternTimeout * 1000) ) );
-            // Thread.sleep( 300 ); // 1 * 1000 );
+            def bounds = [ lower, upper ] // Collections.unmodifiableList( Arrays.asList(lower, upper) );
+            def primeFinder = new PrimesGroovyWithFinder().start()
+            primeFinder.parallelGroup = group
+            results.add( primeFinder.sendAndPromise( bounds ) ) 
+            
         } // for ( int index = 0; index < numberOfParts; index++ )
      
-        int count = 0;
-        IntegerFuture< Object > intFuture = new IntegerFuture< Object >();
-        Thread.sleep( 10 * 1000 );
-        System.out.println( "Loop starting" );
-    
-        for ( Future< Object > result : results ) {
+        println( "Loop starting" );
+        
+        def answer = 0
+        results.each  { result ->
             try {
-                count += 0; 
-                result.onSuccess(intFuture, system.dispatcher());
+                answer += result.get()
             } catch ( Exception e ) {
-                System.out.println( "Exception in for loop" );
+                println( "Exception in for loop" )
                 e.printStackTrace();
             }
         } // for ( Future< Object > result : results ) 
-        System.out.println( "Loop over" );
-        Thread.sleep( 2 * 1000 );
-        count = intFuture.getHoldInt();
-        System.out.println("ending holdInt: " + intFuture.getHoldInt());
-        system.shutdown();
-        return count;
+        println( "Loop over" );
+        // Thread.sleep( 2 * 1000 );
+        return answer
     } // countPrimes
 
-} // end UsePrimesWithFinder - line 104
+} // end UsePrimesWithFinder - line 73
+
+

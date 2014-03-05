@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableList;
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam   
 
-public class UsePrimesWithGuava {
+public class UsePrimesGroovyWithGuava {
     
     public static void main( final String[] args ) throws InterruptedException {
         if ( args.length < 2 ) {
@@ -76,7 +76,7 @@ public class UsePrimesWithGuava {
         } // for ( Future< Object > result : results ) 
         println( "Loop over" );
         Thread.sleep( 2 * 1000 );
-        // group.shutdown()
+        
         return answer
     } // countPrimes
 
