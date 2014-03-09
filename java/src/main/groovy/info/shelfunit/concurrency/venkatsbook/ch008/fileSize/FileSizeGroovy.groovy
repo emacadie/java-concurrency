@@ -1,10 +1,10 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-public class FileSizeGroovy {
+class FileSizeGroovy {
 
-    public final long size;
+    final long size;
 
-    public FileSizeGroovy( final long fileSize ) {
+    def FileSizeGroovy( final long fileSize ) {
         size = fileSize;
     }
 

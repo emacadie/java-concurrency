@@ -1,10 +1,10 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-public final class FileToProcessGroovy {
+def final class FileToProcessGroovy {
 
-    public final String fileName;
+    final String fileName;
 
-    public FileToProcessGroovy( final String name ) {
+    def FileToProcessGroovy( final String name ) {
         fileName = name;
     }
 

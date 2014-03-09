@@ -5,7 +5,7 @@ import java.util.List;
 
 import groovyx.gpars.actor.DynamicDispatchActor
 
-public class SizeCollectorGroovy extends DynamicDispatchActor {
+class SizeCollectorGroovy extends DynamicDispatchActor {
     // these are created and initialized upon instantiation
     // a list of files/directories to process
     def toProcessFileNames = []
@@ -16,7 +16,7 @@ public class SizeCollectorGroovy extends DynamicDispatchActor {
     def finished = false
     void setFinished( arg ) { }
 
-    public void sendAFileToProcess() {
+    void sendAFileToProcess() {
         if ( !toProcessFileNames.isEmpty() && !idleFileProcessors.isEmpty() ) {
             idleFileProcessors.remove( 0 ).send( new FileToProcessGroovy( toProcessFileNames.remove( 0 ) ) )
         }

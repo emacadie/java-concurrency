@@ -3,16 +3,16 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 import groovyx.gpars.actor.DynamicDispatchActor
 import java.io.File;
 
-public class FileProcessorGroovy extends DynamicDispatchActor {
+class FileProcessorGroovy extends DynamicDispatchActor {
 
     def sizeCollector;
 
-    public FileProcessorGroovy( theSizeCollector ) {
+    def FileProcessorGroovy( theSizeCollector ) {
         sizeCollector = theSizeCollector;
         registerToGetFile()
     }
 
-    public void registerToGetFile() {
+    def void registerToGetFile() {
         sizeCollector.send( this );
     }
 

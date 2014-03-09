@@ -3,9 +3,9 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 import groovyx.gpars.group.DefaultPGroup
 import groovyx.gpars.actor.DynamicDispatchActor
 
-public class ConcurrentFileSizeWGPars {
+class ConcurrentFileSizeWGPars {
 
-    public static void startFileProcessor( group, sizeCollector ) {
+    def static void startFileProcessor( group, sizeCollector ) {
         for ( int i = 0; i < 10; i++ ) {
             def fileProcessor = new FileProcessorGroovy( sizeCollector ).start()
             fileProcessor.parallelGroup = group
@@ -16,7 +16,7 @@ public class ConcurrentFileSizeWGPars {
         group.shutdown()
     } // end startFileProcessor
 
-    public static void main( final String[] args ) {
+    def static void main( final String[] args ) {
 	
         def group = new DefaultPGroup()
         def sizeCollector = new SizeCollectorGroovy().start()
