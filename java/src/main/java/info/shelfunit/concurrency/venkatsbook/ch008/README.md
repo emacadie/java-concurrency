@@ -15,17 +15,13 @@ The directory fileSize/ is next.
 
 The directory typed01/ is next.    
 
-The directory typed02/ is next.   
+The directory typed02/ is next. I was kind of tired of refactoring all of this stuff by this point.    
 
-gpars/
+The directory transactors/ is next.    
 
+Last is gpars/.    
 
-
-PrintResult.java
-
-transactors/
-
-
+PrintResult.java is used for returning results from actors.    
 
 It looks like that for Akka actors that one of the arguments to the tell method to send a message is the instance itself. For some reason, that seems a bit odd to me. I do not like littering the onReceive method with a lot of if (message instanceOf XXX) statements. I like the way GPars DynamicDispatchActor classes can overload the onMessage method. It is not quite as idiomatic as the loop { react { } } closures in DefaultActor. But nested closures can get pretty deep.     
 
