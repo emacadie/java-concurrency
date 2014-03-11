@@ -16,39 +16,7 @@ A message of type FileToProcess will add the FileToProcess's file name to the li
 
 A message of type FileSize will add its size value to SizeCollector's totalSize variable. It will decrement the number of files to visit. If the number of files to visit is 0, it will print out the total and the time taken.    
 
-
-FileProcessor
-   public void onReceive( final Object message ) {
-
-   final FileToProcess fileToProcess = ( FileToProcess ) message;
-   // orig: final File file = new File( fileToProcess.fileName );
-   if ( message instanceof FileToProcess ) {
-       // System.out.println( "here is the fileName: " + ( ( FileToProcess )message ).fileName );
-       }
-       final File file = new File( fileToProcess.fileName );
-       long size = 0L;
-
-       if ( file.isFile() ) {
-           size = file.length();
-	   } else {
-	       File[] children = file.listFiles();
-	           if ( children != null ) {
-		      for ( File child : children ) {
-		      	      if ( child.isFile() ) { 
-			      	   size += child.length(); 
-				   	    } else {
-					      	   sizeCollector.tell( new FileToProcess( child.getPath() ), getSelf() );
-						   		           }
-										}
-										    }
-										    } // if ( file.isFile() )
-
-										    sizeCollector.tell( new FileSize( size ), getSelf() );
-										    registerToGetFile();
-										    // } // if (message instanceof)
-    } // onReceive
-
-This is supposed to by multithreaded, but I only create one instance of FileProcessor. Did I do something wrong? I should create a factory when I have some connectivity.    
+FileProcessor can receive a message of FileToProcess. If the message is a file, it will get the size and send it in a FileSize message to the SizeCollector. If it is a directory, it will look at the objects in that directory. If any of them are subdirectories, they will be send as a FileToProcess message to SizeCollector. If any of the objects are files, their sizes are totaled, and the total is sent as a FileSize message to SizeCollector.    
 
 FileToProcess is a class that holds a String with the file name.    
 
