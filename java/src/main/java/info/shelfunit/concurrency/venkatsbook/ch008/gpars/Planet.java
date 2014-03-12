@@ -10,14 +10,14 @@ import java.util.Date;
  */
 public final class Planet {
 
-    public Planet (double aMass, String aName, Date aDateOfDiscovery) {
+    public Planet ( double aMass, String aName, Date aDateOfDiscovery ) {
 	fMass = aMass;
 	fName = aName;
 	//make a private copy of aDateOfDiscovery
 	//this is the only way to keep the fDateOfDiscovery
 	//field private, and shields this class from any changes that 
 	//the caller may make to the original aDateOfDiscovery object
-	fDateOfDiscovery = new Date(aDateOfDiscovery.getTime());
+	fDateOfDiscovery = new Date( aDateOfDiscovery.getTime() );
     }
 
     /**
@@ -64,7 +64,7 @@ public final class Planet {
      * same data as fDate.
      */
     public Date getDateOfDiscovery() {
-	return new Date(fDateOfDiscovery.getTime());
+	return new Date( fDateOfDiscovery.getTime() );
     }
 
     // PRIVATE //
