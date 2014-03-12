@@ -14,7 +14,7 @@ class Fortune {
       loop { 
 	react { name ->
 	  println( "$name runs in ${ Thread.currentThread() }" )
-	  sender.send("${name}, you have a bright future")
+	  sender.send( "${name}, you have a bright future" )
 	}
       }
     } // end fortuneTeller
@@ -25,17 +25,17 @@ class Fortune {
 
     println( "main stuff runs in ${ Thread.currentThread() } \n" )
 
-    Thread.sleep(1000)
+    Thread.sleep( 1000 )
 
     def latch = new CountDownLatch( 2 )
-    fortuneTeller.sendAndContinue("Rob") { println it; latch.countDown() }
-    fortuneTeller.sendAndContinue("Fred") { println it; latch.countDown() }
+    fortuneTeller.sendAndContinue( "Rob" ) { println it; latch.countDown() }
+    fortuneTeller.sendAndContinue( "Fred" ) { println it; latch.countDown() }
     println("Rob and Fred are keeping their fingers crossed")
 
-    if ( !latch.await(1, TimeUnit.SECONDS) ) {
-      println("Fortune teller did not respond before timeout")
+    if ( !latch.await( 1, TimeUnit.SECONDS ) ) {
+      println( "Fortune teller did not respond before timeout" )
     } else { 
-      println("Bob and Fred are happy campers")
+      println( "Bob and Fred are happy campers" )
     }
 
   } // end doStuff
@@ -44,5 +44,6 @@ class Fortune {
     Fortune fortune = new Fortune()
     fortune.doStuff()
   } // end main
+
 } // end Fortune
 

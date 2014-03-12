@@ -6,10 +6,13 @@ import java.util.concurrent.TimeUnit
 class HollywoodActorRunner { 
 
   def runCustomActor() { 
+    println( "In runCustomActor" )
     def console = new CustomActor()
     console.start()
-    console.send('Message')
+    console.send( 'Message' )
     console << 'Message'
+    console.join( 2, TimeUnit.SECONDS )
+    // println( "Done with runCustomActor" )
   }
 
   def doStuff() { 
@@ -35,7 +38,8 @@ class HollywoodActorRunner {
     haRunner.doStuff()
     println('Done in main')
     // It seems to need this to print stuff to console
-    Thread.sleep(1000)
+    Thread.sleep( 1000 )
+    haRunner.runCustomActor()
   } // end method main
 
 } // end HollywoodActorRunner
