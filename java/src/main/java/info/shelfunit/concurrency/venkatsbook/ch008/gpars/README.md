@@ -6,6 +6,6 @@ FortuneTellerGPars.java is an actor class that extends DynamicDispatchActor. In 
 
 UseFortuneTellerGPars.java instantiates a couple of FortuneTellerGPars objects, and sends messages in a method for Double and String messages, and a method for Planet messages.    
 
-There is also some use of GPars Promises, which are similar to JDK Futures objects. You can send a message with the call DynamicDispatchActor.sendAndPromise( X ), which returns a Promise. You can get the result by calling Promise.get(), similar to Future.get(). You can see if the Promise is finished by calling Promise.isBound(), similar to Future.isDone().    
+There is also some use of GPars Promises, which are similar to JDK Futures objects. You can send a message with the call DynamicDispatchActor.sendAndPromise( X ), which returns a Promise. You can get the result by calling Promise.get(), similar to Future.get(). You can see if the Promise is finished by calling Promise.isBound(), similar to Future.isDone(). The Actor returns data by calling its replyIfExists() method.       
 
 

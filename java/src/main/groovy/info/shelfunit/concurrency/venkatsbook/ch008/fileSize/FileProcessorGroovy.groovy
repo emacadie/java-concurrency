@@ -13,6 +13,9 @@ class FileProcessorGroovy extends DynamicDispatchActor {
     }
 
     def void registerToGetFile() {
+        // I cannot get this to work by sending a RequestAFileGroovy object
+        // def rafG =  new RequestAFileGroovy()
+        // sizeCollector.send( rafG )
         sizeCollector.send( this );
     }
 

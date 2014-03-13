@@ -17,7 +17,7 @@ public class FortuneTellerGPars extends DynamicDispatchActor {
     } // end onMessage
 
     public void onMessage( final Object msg ) {
-	System.out.println( "In onMessage for FortuneTellerGPars with Object" );
+	System.out.println( "In onMessage for FortuneTellerGPars with Object: " + msg.getClass().getName() );
 	try {
 	} catch ( Exception e ) {
 	    throw e;

@@ -27,17 +27,17 @@ class MultiMessage003 {
       become { 
 
 	when { Buy message -> 
-	  println("Processing Buy")
+	  println( "Processing Buy" )
 	  println( "Buying ${message.quantity} shares of ${message.ticker}" )
 	}
 
 	when { LookUp message -> 
-	  println("Processing Lookup")
-	  sender.send( ( int ) (Math.random() * 1000 ) )
+	  println( "Processing Lookup" )
+	  sender.send( ( int ) ( Math.random() * 1000 ) )
 	}
 
 	when { Object message ->
-	  println("Processing everything else: ${message}")
+	  println( "Processing everything else: ${message}" )
 	}
 	
       }.start() // the call to start could go here
@@ -50,7 +50,7 @@ class MultiMessage003 {
   def doStuff() { 
     // def trader = new Trader().start() // the call to start could go here
     def trader = new Trader()
-    trader.sendAndContinue( new LookUp("XYZ") ) { 
+    trader.sendAndContinue( new LookUp( "XYZ" ) ) { 
       println( "Price of XYZ stock is ${it}" )
     }
 
@@ -58,8 +58,8 @@ class MultiMessage003 {
     trader.join( 1, TimeUnit.SECONDS )
 
     trader.send( "This is a string message" )
-    trader.send(['Kirk', 'Picard', 'Sisko', 'Janeway', 'Archer'])
-    println("Done")
+    trader.send( [ 'Kirk', 'Picard', 'Sisko', 'Janeway', 'Archer' ] )
+    println( "Done" )
   } // end doStuff
 
   def static void main( String[ ] args ) { 

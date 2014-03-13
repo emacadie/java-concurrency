@@ -4,12 +4,11 @@ import groovy.transform.Immutable
 
 import groovyx.gpars.actor.Actors
 import groovyx.gpars.actor.DefaultActor
-import groovyx.gpars.actor.DynamicDispatchActor
 import java.util.concurrent.TimeUnit
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
-class MultiMessage002 {
+class MultiMessage004 {
 
   @Immutable
   class LookUp { 
@@ -22,39 +21,40 @@ class MultiMessage002 {
     int quantity
   }
 
-  class Trader extends DynamicDispatchActor { 
-    void onMessage( Buy message ) { 
-      println( "Processing Buy" )
-      println( "Buying ${message.quantity} shares of ${message.ticker}" )
+  def trader = Actors.actor { 
+    
+      become { 
+	when {  Buy message ->
+	  println( "Processing Buy" )
+	  println( "Buying ${ message.quantity} shares of ${message.ticker}" )
+	}
+
+	when {  LookUp message ->
+	  println( "Processing Lookup" )
+	  sender.send( ( int ) ( Math.random() * 1000 ) )
+	}
+
+	when { Object message ->
+	  println( "Processing everything else: ${message}" )
+	}
+	
+	// }
     }
-
-    void onMessage( LookUp message ) { 
-      println( "Processing Lookup" )
-      sender.send( ( int ) ( Math.random() * 1000 ) )
-    }
-
-    void onMessage( Object message ) { 
-      println( "This was something else: ${message}" )
-    }
-
-  } // end class Trader
-
-
+  } // end trader
 
   def doStuff() { 
-    def trader = new Trader().start()
     trader.sendAndContinue( new LookUp( "XYZ" ) ) { 
       println( "Price of XYZ stock is ${it}" )
     }
-
     trader.send( new Buy( "XYZ", 200 ) )
     trader.join( 1, TimeUnit.SECONDS )
-    trader.send( "This is a String" )
+    trader.send( "Sending a string" )
+    println("Done")
   } // end doStuff
 
   def static void main( String[ ] args ) { 
-    MultiMessage002  mm002 = new MultiMessage002()
-    mm002.doStuff()
+    MultiMessage001  mm001 = new MultiMessage001()
+    mm001.doStuff()
     Thread.sleep( 2000 )
   } // end main
 

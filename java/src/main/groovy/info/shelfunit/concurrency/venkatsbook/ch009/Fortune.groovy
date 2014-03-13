@@ -28,7 +28,7 @@ class Fortune {
     Thread.sleep( 1000 )
 
     def latch = new CountDownLatch( 2 )
-    fortuneTeller.sendAndContinue( "Rob" ) { println it; latch.countDown() }
+    fortuneTeller.sendAndContinue( "Rob" ) { println "Rob: ${it}"; latch.countDown() }
     fortuneTeller.sendAndContinue( "Fred" ) { println it; latch.countDown() }
     println("Rob and Fred are keeping their fingers crossed")
 
@@ -41,8 +41,10 @@ class Fortune {
   } // end doStuff
 
   static void main( String [] args ) { 
+    println "Starting main"
     Fortune fortune = new Fortune()
     fortune.doStuff()
+    println "Ending main"
   } // end main
 
 } // end Fortune
