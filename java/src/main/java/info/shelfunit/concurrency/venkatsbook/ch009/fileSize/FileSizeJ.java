@@ -5,7 +5,7 @@ package info.shelfunit.concurrency.venkatsbook.ch009.fileSize;
 public final class FileSizeJ {
  
     private final long size;
-    public FileSizeJ(long argSize) {
+    public FileSizeJ( long argSize ) {
 	size = argSize;
     }
 
