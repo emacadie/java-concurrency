@@ -20,7 +20,15 @@ Next we go into the fileSize/ directory.
 
 Next is DataFlow001.groovy which introduces Dataflow Variables. We will fetch the front pages of two web sites, and print the sizes of them to the screen. We will use Dataflow Variables for this. Dataflow variables can only be set once, but read many times. The first read will be blocked until the variable is set. The variables are declared, and then set in a method. The method to set them is called by the static method Dataflow.task(). The calls to task are run concurrently. Then the results are printed to the screen. Dataflow.task() returns a Promise, but it looks like the Promise is not used in this program.   
 
-FileSize.groovy is next. It is another example of the infamous file tree size program that we have been making here again and again.   
+FileSize.groovy is next. It is another example of the infamous file tree size program that we have been making here again and again. We create two DataflowQueues: one to hold the sizes of files (called "sizes"), and one to keep a count of pending files and directories (called "pendingFiles"). We also define a DefaultPGroup for the threads. They will be accessed from multiple methods. These should be defined at the top of the class.    
+
+We start in a method to get the total size called findTotalFileSize. We set a few variables. We call findSize by sending it to the method DefaultPGroup.task(). Like Dataflow.task(), this will run code in a thread and return a Promise. But in this program the Promise is never captured.  
+
+We update totalSize by calling sizes.val, or sizes.getVal(). This will act like java.util.Stack.pop(): It will return and remove the top value in the DataflowQueue. We keep continuing in findTotalFileSize until the first two values pulled from pendingSizes add up to 0.    
+
+In findSize(), if the file sent to the method is a file, we just add its size to sizes. If it is a directory, we cycle through the child files, and add up their total to sizes. If one of them is a directory, we add -1 to the pendingFiles queue, and use DefaultPGroup.task() to call recursively call findFiles on the directory. Then at the end we add 1 to pendingFiles.    
+
+The author himself explains it best: We push 1 to pendingFiles when we begin a task, and -1 when we are done with a task.   
 
 It seems to take longer that the Actor-based solutions.    
 
