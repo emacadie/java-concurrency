@@ -17,26 +17,26 @@ public class FileProcessorJ extends DynamicDispatchActor {
     }
 
     private void registerToGetFile() { 
-	sizeCollector.send(new RequestAFileJ());
+	sizeCollector.send( new RequestAFileJ() );
     }
 
     public void onMessage( final FileToProcessJ message ) {
-	File file = new File(message.getFileName());
+	File file = new File( message.getFileName() );
 	long size = 0;
 	if ( !file.isDirectory() ) { 
 	    size = file.length();
 	} else { 
 	    File[] children = file.listFiles();
 	    if ( children != null ) { 
-		for (File child : children) { 
-		    if (child.isFile()) {
+		for ( File child : children ) { 
+		    if ( child.isFile() ) {
 			size += child.length();
 		    } else { 
-			sizeCollector.send( new FileToProcessJ(child.getPath()) );
+			sizeCollector.send( new FileToProcessJ( child.getPath() ) );
 		    }
 		}
 	    }
-	    sizeCollector.send(new FileSizeJ(size));
+	    sizeCollector.send( new FileSizeJ( size ) );
 	    registerToGetFile();
 	} 
     } // end onMessage

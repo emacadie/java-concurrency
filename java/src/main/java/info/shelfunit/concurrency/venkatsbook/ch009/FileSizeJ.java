@@ -14,7 +14,7 @@ public class FileSizeJ {
 
     public void findSize( File file ) { 
 	long size = 0;
-	if( !file.isDirectory() ) { 
+	if ( !file.isDirectory() ) { 
 	    size = file.length();
 	} else { 
 	    final File[] children = file.listFiles();

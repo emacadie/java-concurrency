@@ -81,10 +81,12 @@ gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiM
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage002   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MultiMessage003   
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinder -PmainArgs="/home/ericm/github"     
-gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinderJ -PmainArgs="/home/ericm/github"     
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.DataFlow001        
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.FileSize -PmainArgs="/home/ericm/github"     
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.FileSizeJ -PmainArgs="/home/ericm/github"    
+gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.fileSize.FileSizeFinderJ -PmainArgs="/home/ericm/github"     
 gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MyActorRunner     
+
 
 To run the ClosureLock class:    
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.locks.FirstLockRunner    
