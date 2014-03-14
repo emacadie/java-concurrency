@@ -18,11 +18,13 @@ Next in MultiMessage002.groovy instead of defining the trader Actor with the Act
 
 Next we go into the fileSize/ directory.    
 
-DataFlow001.groovy
+Next is DataFlow001.groovy which introduces Dataflow Variables. We will fetch the front pages of two web sites, and print the sizes of them to the screen. We will use Dataflow Variables for this. Dataflow variables can only be set once, but read many times. The first read will be blocked until the variable is set. The variables are declared, and then set in a method. The method to set them is called by the static method Dataflow.task(). The calls to task are run concurrently. Then the results are printed to the screen. Dataflow.task() returns a Promise, but it looks like the Promise is not used in this program.   
 
-FileSize.groovy
+FileSize.groovy is next. It is another example of the infamous file tree size program that we have been making here again and again.   
 
+It seems to take longer that the Actor-based solutions.    
 
+I am not too sure I get Dataflow Variables. "They can only be set once, so they are thread-safe!" That sounds like regular old immutable variables.   
 
 
 
