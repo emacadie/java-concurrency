@@ -5,7 +5,7 @@ import groovyx.gpars.actor.DynamicDispatchActor
 
 // from Programming Concurrency on the JVM by Venkat Subramaniam
 
-class SizeCollector extends DynamicDispatchActor{
+class SizeCollector extends DynamicDispatchActor {
   
   def toProcessFileNames = []
   def idleFileProcessors = []
@@ -28,9 +28,10 @@ class SizeCollector extends DynamicDispatchActor{
   } // sendAFileToProcess() 
 
   void onMessage( RequestAFile message ) {
-    // println( "idleFileProcessors sender is a " + sender.class.name )
-    idleFileProcessors.add( sender )
-    sendAFileToProcess()
+      // println( "idleFileProcessors message is a " + message.class.name )
+      // println( "idleFileProcessors sender is a " + sender.class.name )
+      idleFileProcessors.add( sender )
+      sendAFileToProcess()
   }
 
   void onMessage( FileToProcess message ) {

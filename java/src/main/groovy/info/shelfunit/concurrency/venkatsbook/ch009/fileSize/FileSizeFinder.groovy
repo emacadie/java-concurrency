@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit
 
 class FileSizeFinder {
   
-  void doStuff(filePath) { 
+  void doStuff( filePath ) { 
     def sizeCollector = new SizeCollector().start()
     sizeCollector.send( new FileToProcess( filePath ) )
     100.times{ new FileProcessor( sizeCollector ).start() }

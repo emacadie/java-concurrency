@@ -16,6 +16,8 @@ I did not like the "if instanceof" construction, so I made a copy in MultiMessag
 
 Next in MultiMessage002.groovy instead of defining the trader Actor with the Actors.actor closure, we make a class that extends DynamicDispatchActor. For some reason using the sender property in a DynamicDispatchActor works here. I could not get it to work in my Groovy file size example in chapter 8. In MultiMessage003.groovy, the DynamicDispatchActor is defined by sending a class to the constructor of DynamicDispatchActor. In the book, he sends a closure to the constructor. I did this in MultiMessage005.groovy. In MultiMessage003.groovy, I tried out using the "become" and "when" closures. I also put stuff into methods and classes. I guess it is not quite idiomatic Groovy. I also added some extra messages.      
 
+The "become" closure can be used to dynamically create a message handler. So even if you have a predefined class extending DynamicDispatchActor, you can still send it a closure using the "become" method, and you can also make a "become" closure if you make an actor using Actors.actor. 
+
 Next we go into the fileSize/ directory.    
 
 Next is DataFlow001.groovy which introduces Dataflow Variables. We will fetch the front pages of two web sites, and print the sizes of them to the screen. We will use Dataflow Variables for this. Dataflow variables can only be set once, but read many times. The first read will be blocked until the variable is set. The variables are declared, and then set in a method. The method to set them is called by the static method Dataflow.task(). The calls to task are run concurrently. Then the results are printed to the screen. Dataflow.task() returns a Promise, but it looks like the Promise is not used in this program.   

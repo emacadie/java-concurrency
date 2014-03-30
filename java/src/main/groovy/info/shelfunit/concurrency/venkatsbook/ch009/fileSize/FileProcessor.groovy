@@ -22,13 +22,13 @@ class FileProcessor extends DefaultActor{
   }
 
   void registerToGetFile() { 
-    sizeCollector.send(new RequestAFile())
+    sizeCollector.send( new RequestAFile() )
   }
 
   void act() {
     loop { 
       react { message ->
-	def file = new File(message.fileName)
+	def file = new File( message.fileName )
 	def size = 0
 	if ( !file.isDirectory() ) { 
 	  size = file.length()
@@ -36,10 +36,10 @@ class FileProcessor extends DefaultActor{
 	  def children = file.listFiles()
 	  if ( children != null ) { 
 	    children.each { child ->
-	      if (child.isFile()) {
+	      if ( child.isFile() ) {
 		size += child.length()
 	      } else { 
-		sizeCollector.send( new FileToProcess(child.path) )
+		sizeCollector.send( new FileToProcess( child.path ) )
 	      }
 	    }
 	  }
