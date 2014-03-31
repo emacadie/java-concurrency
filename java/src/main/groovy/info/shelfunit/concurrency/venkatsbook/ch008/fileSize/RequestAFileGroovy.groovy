@@ -1,26 +1,6 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-import groovy.transform.Immutable
-
-/*
-@Immutable
-class RequestAFileGroovy {
-    int placeHolder
-} // end RequestAFile
-*/
-/*
-final class RequestAFileGroovy {
-    final Integer placeHolder
-    
-    RequestAFileGroovy( arg ) {
-        placeHolder = arg
-    }
-    
-    // setFileProcessorGroovy( arg ) { }
-
-} // end RequestAFile
-*/
-
+// import groovy.transform.Immutable
 
 final class RequestAFileGroovy {
     final FileProcessorGroovy fileProcessorGroovy

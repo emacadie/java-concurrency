@@ -23,20 +23,12 @@ class SizeCollectorGroovy extends DynamicDispatchActor {
         }
     } // sendAFileToProcess
 	
-    // def onMessage( def requestAFileGroovy ) {    
-	
- 
     void onMessage( RequestAFileGroovy message ) {
-        // the sender is a FileProcessor
-        // println( "Message is ${message.getClass().getName()}, sender is a ${sender.getClass().getName()}" )
-	    // idleFileProcessors.add( sender )
 	    idleFileProcessors.add( message.fileProcessorGroovy )
 	    sendAFileToProcess()
 	}
 
 	void onMessage( FileProcessorGroovy message ) {
-	    // println( "Message is FileProcessorGroovy, sender is a ${sender.getClass().getName()}" )
-	    // the sender is a FileProcessor
 	    idleFileProcessors.add( message )
 	    sendAFileToProcess()
 	}

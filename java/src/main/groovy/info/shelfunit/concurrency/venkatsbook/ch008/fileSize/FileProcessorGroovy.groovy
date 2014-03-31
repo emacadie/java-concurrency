@@ -6,7 +6,6 @@ import groovyx.gpars.actor.StaticDispatchActor
 
 import java.io.File;
 
-/*
 class FileProcessorGroovy extends DynamicDispatchActor {
 
     def sizeCollector;
@@ -18,8 +17,6 @@ class FileProcessorGroovy extends DynamicDispatchActor {
 
     def void registerToGetFile() {
         sizeCollector.send( new RequestAFileGroovy( this ) )
-        // sizeCollector.send( new RequestAFileGroovy() )
-        // sizeCollector.send( this );
     }
 
     void onMessage( FileToProcessGroovy message ) {
@@ -48,7 +45,7 @@ class FileProcessorGroovy extends DynamicDispatchActor {
    
     
 } // end class FileProcessorGroovy extends DynamicDispatchActor - line 54
-*/
+
 /*
 class FileProcessorGroovy extends DefaultActor {
     
@@ -97,23 +94,18 @@ class FileProcessorGroovy extends DefaultActor {
 } // end class FileProcessorGroovy extends DefaultActor
 */
 
-
+/*
 class FileProcessorGroovy extends StaticDispatchActor< FileToProcessGroovy > {
 
     def sizeCollector;
-    
 
     def FileProcessorGroovy( theSizeCollector ) {
         sizeCollector = theSizeCollector;
-        
         registerToGetFile()
     }
 
     def void registerToGetFile() {
         sizeCollector.send( new RequestAFileGroovy( this ) )
-        // sizeCollector.send( new RequestAFileGroovy( 0 ) )
-        // sizeCollector.send( new RequestAFileGroovy( ) )    
-        // sizeCollector.send( this );
     }
 
     void onMessage( FileToProcessGroovy message ) {
@@ -140,6 +132,5 @@ class FileProcessorGroovy extends StaticDispatchActor< FileToProcessGroovy > {
         registerToGetFile();
     } // onMessage
    
-    
 } // end class FileProcessorGroovy extends StaticDispatchActor - line 54
-
+*/
