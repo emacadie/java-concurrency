@@ -1,8 +1,16 @@
 package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 
-class RequestAFileGroovy {
+// import groovy.transform.Immutable
+
+final class RequestAFileGroovy {
+    final FileProcessorGroovy fileProcessorGroovy
     
-    def i = 0
+    RequestAFileGroovy( arg ) {
+        fileProcessorGroovy = arg
+    }
+    
+    // setFileProcessorGroovy( arg ) { }
 
 } // end RequestAFile
+
 

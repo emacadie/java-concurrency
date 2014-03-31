@@ -3,6 +3,7 @@ package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import groovyx.gpars.actor.DynamicDispatchActor
 
 class SizeCollectorGroovy extends DynamicDispatchActor {
@@ -22,16 +23,12 @@ class SizeCollectorGroovy extends DynamicDispatchActor {
         }
     } // sendAFileToProcess
 	
-	void onMessage( RequestAFileGroovy message ) {
-	    // the sender is a FileProcessor
-	    println( "sender is a ${sender.getClass().getName()}" )
-	    idleFileProcessors.add( sender )
+    void onMessage( RequestAFileGroovy message ) {
+	    idleFileProcessors.add( message.fileProcessorGroovy )
 	    sendAFileToProcess()
 	}
-	
+
 	void onMessage( FileProcessorGroovy message ) {
-	    // println( "sender is a ${sender.getClass().getName()}" )
-	    // the sender is a FileProcessor
 	    idleFileProcessors.add( message )
 	    sendAFileToProcess()
 	}
