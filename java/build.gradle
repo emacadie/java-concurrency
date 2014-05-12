@@ -4,24 +4,8 @@ apply plugin: 'groovy'
 // do not run this every single time
 apply plugin: 'checkstyle'
 
-
-
 repositories {
   mavenCentral()
-
-/*
-  maven {
-    // Name is optional. If not set url property is used	
-    name = 'Main Maven repository'
-    url = 'http://repo.typesafe.com/typesafe/releases'
-  }
-*/
-/*
-  maven {
-      name "codehaus" 
-      url =  "http://dist.codehaus.org/"
-  }
-*/
 }
 
 allprojects {
@@ -114,7 +98,6 @@ task runJava(type: JavaExec) {
      // systemProperties = System.getProperties()
      jvmArgs '-server'
      // We can pass arguments to the main() method
-     // of gradle.sample.SampleApp.
      if ( rootProject.hasProperty( "mainArgs" ) ) {     
      	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
      } 
@@ -124,8 +107,7 @@ task runGroovy(type: JavaExec) {
      println( "-- Groovy version: " + groovy.lang.GroovySystem.getVersion() )
      dependsOn classes
      description = 'Run gradle.sample.SampleApp'
-     // main class to execute.
-     // main = System.properties['mainClass']
+     // main class to execute
      if ( rootProject.hasProperty("mainClass") ) {     
      	main = mainClass
      } else {
@@ -137,12 +119,10 @@ task runGroovy(type: JavaExec) {
      systemProperty 'sysProp', 'notUsed'
      jvmArgs '-client'
      // We can pass arguments to the main() method
-     // of gradle.sample.SampleApp.
      if ( rootProject.hasProperty( "mainArgs" ) ) {     
      	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
      } 
 }
-
 
 task showProperties {
   doLast {
@@ -156,7 +136,6 @@ task(console, dependsOn: 'classes', type: JavaExec) {
   main = 'groovy.ui.Console'
   classpath = sourceSets.main.runtimeClasspath
 }
-
 
 checkstyle {
   // configProperties = [translation.severity: 'warn'] // [tabWidth: 10, translation.severity: 'warn']
