@@ -9,6 +9,7 @@ import info.shelfunit.util.ClassUtil;
 
 public class PrimesWithGuava extends UntypedActor {
 
+    @SuppressWarnings( "unchecked" )
     public void onReceive( final Object boundsList ) {
 
 	System.out.println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );

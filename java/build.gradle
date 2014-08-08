@@ -18,7 +18,6 @@ allprojects {
 
     // testCompile ''
     compile 'commons-codec:commons-codec:1.6'
-    // compile 'io.netty:netty:3.5.7.Final'
     compile 'log4j:log4j:1.2.17'
 
     // logging
@@ -38,8 +37,6 @@ allprojects {
     // This works: compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
     compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC2'
     compile 'com.typesafe.akka:akka-transactor_2.10:2.2.0'
-    // compile 'com.typesafe.akka:akka-actor:2.10.1'
-    // compile 'org.scala-lang:scala-library:2.10.1'
 
     // ScalaSTM, since that is what Akka uses for STM
     compile 'org.scala-stm:scala-stm_2.10:0.7'
