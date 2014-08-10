@@ -8,16 +8,17 @@ import info.shelfunit.util.ClassUtil;
 
 public class Primes extends UntypedActor {
 
+    @SuppressWarnings( "unchecked" )
     public void onReceive( final Object boundsList ) {
 
 	System.out.println( "Primes " + hashCode() + " from Thread " + Thread.currentThread().getName() );
 
-	if ( new ClassUtil(boundsList).doesImplement( "java.util.List" ) ) {
+	if ( new ClassUtil( boundsList ).doesImplement( "java.util.List" ) ) {
 	    final List< Integer > bounds = ( List< Integer > ) boundsList;
 	// boundsList is a java.util.Collections$UnmodifiableRandomAccessList 
-	    final int count = PrimeFinder.countPrimesInRange( bounds.get(0), bounds.get(1) );
+	    final int count = PrimeFinder.countPrimesInRange( bounds.get( 0 ), bounds.get( 1 ) );
 
-	    getSender().tell(count, getSelf());
+	    getSender().tell( count, getSelf() );
 	} // if ( cu.doesImplement( "java.util.List" ) ) 
     } // end onReceive
 
