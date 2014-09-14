@@ -48,10 +48,11 @@ allprojects {
     compile 'com.google.guava:guava:14.0.1'
 
     // GPars
-    compile 'org.codehaus.gpars:gpars:1.0.0'
+    compile 'org.codehaus.gpars:gpars:1.2.0'
   }
 
-  tasks.withType(Compile) { Compile compile ->
+
+  tasks.withType( JavaCompile ) { JavaCompile compile ->
     compile.options.debug = true
     compile.options.compilerArgs = [
       '-Xlint:deprecation',
@@ -89,7 +90,6 @@ task runJava(type: JavaExec) {
      // Extra options can be set.
      systemProperty 'sysProp', 'notUsed'
      println System.properties['iterations'] 
-     // systemProperty 'iterations', System.getProperty('iterations')
      systemProperty 'iterations', System.properties['iterations'] 
      // you can use this if nothing is set via command line
      // systemProperties = System.getProperties()
