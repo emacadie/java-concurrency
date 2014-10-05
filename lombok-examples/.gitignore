@@ -22,4 +22,6 @@ tree*txt
 *class
 *jar
 /target/*
+.gradle/*
+build/*
 #- EOF
