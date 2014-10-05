@@ -1,0 +1,141 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+// apply plugin: 'groovy'
+// do not run this every single time
+// apply plugin: 'checkstyle'
+
+repositories {
+  mavenCentral()
+}
+
+allprojects {
+  dependencies {
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.mockito:mockito-all:[1.8.5,)'
+    // From Maven, it's GroupId:ArtifactId:Version 
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    // testCompile 'com.typesafe.akka:akka-testkit_2.10:2.2.0-RC2'
+    compile 'org.projectlombok:lombok:1.14.8'
+
+    // testCompile ''
+    // compile 'commons-codec:commons-codec:1.6'
+    compile 'log4j:log4j:1.2.17'
+
+    // logging
+    compile 'org.slf4j:slf4j-api:1.7.+'
+    testRuntime 'org.slf4j:slf4j-ext:1.7.+'
+    testRuntime 'org.slf4j:jcl-over-slf4j:1.7.+'
+    testRuntime 'org.slf4j:jul-to-slf4j:1.7.+'
+    testRuntime 'org.slf4j:log4j-over-slf4j:1.7.+'
+    
+    testRuntime 'ch.qos.logback:logback-core:1.0.+'
+    testRuntime 'ch.qos.logback:logback-classic:1.0.+'
+
+    // compile 'org.codehaus.groovy:groovy-all:2.1.0'
+    // compile 'org.clojure:clojure:1.5.1'
+
+    // for Akka
+    // This works: compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
+    // compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC2'
+    // compile 'com.typesafe.akka:akka-transactor_2.10:2.2.0'
+
+    // ScalaSTM, since that is what Akka uses for STM
+    // compile 'org.scala-stm:scala-stm_2.10:0.7'
+
+    // Multiverse
+    // compile 'org.multiverse:multiverse-core:0.7.0'
+    
+    // Guava
+    // compile 'com.google.guava:guava:14.0.1'
+
+    // GPars
+    // compile 'org.codehaus.gpars:gpars:1.2.0'
+  }
+
+
+  tasks.withType( JavaCompile ) { JavaCompile compile ->
+    compile.options.debug = true
+    compile.options.compilerArgs = [
+      '-Xlint:deprecation',
+      '-Xlint:unchecked'
+      // '-implicit:class',
+      // '-Awarns', '-Xmaxwarns', '10000',
+      // '-J-Xbootclasspath/p:$CHECKERS/binary/jsr308-all.jar',
+      // '-processor', 'checkers.nullness.NullnessChecker',
+      // '-Xbootclasspath/p:$CHECKERS/jdk/jdk.jar',	
+      // '-version'
+      ]
+  }
+
+}
+
+test {
+  maxParallelForks = 5
+  forkEvery = 50
+  // this will make it run the test every time you run 'gradle test'
+  outputs.upToDateWhen { false }
+}
+
+task runJava(type: JavaExec) {
+     println( "-- Groovy version: " + groovy.lang.GroovySystem.getVersion() )
+     dependsOn classes
+     description = 'Run gradle.sample.SampleApp'
+     // Java main class to execute.
+     if ( rootProject.hasProperty("mainClass") ) {     
+     	main = mainClass
+     } else {
+       main = 'org.lookup'
+     }
+     // We need to set the classpath.
+     classpath sourceSets.main.runtimeClasspath
+     // Extra options can be set.
+     systemProperty 'sysProp', 'notUsed'
+     println System.properties['iterations'] 
+     systemProperty 'iterations', System.properties['iterations'] 
+     // you can use this if nothing is set via command line
+     // systemProperties = System.getProperties()
+     jvmArgs '-server'
+     // We can pass arguments to the main() method
+     if ( rootProject.hasProperty( "mainArgs" ) ) {     
+     	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
+     } 
+}
+
+/*
+task runGroovy(type: JavaExec) {
+     println( "-- Groovy version: " + groovy.lang.GroovySystem.getVersion() )
+     dependsOn classes
+     description = 'Run gradle.sample.SampleApp'
+     // main class to execute
+     if ( rootProject.hasProperty("mainClass") ) {     
+     	main = mainClass
+     } else {
+       main = 'org.lookup'
+     }
+     // We need to set the classpath.
+     classpath sourceSets.main.runtimeClasspath
+     // Extra options can be set.
+     systemProperty 'sysProp', 'notUsed'
+     jvmArgs '-client'
+     // We can pass arguments to the main() method
+     if ( rootProject.hasProperty( "mainArgs" ) ) {     
+     	args = mainArgs.tokenize() // args wants a List, so split by spaces if need be
+     } 
+}
+*/
+task showProperties {
+  doLast {
+    println "Version: $version"
+    println "Custom property: $customProperty"
+  }
+}
+
+// you can type "gradle console" and get a console with all your classes
+task(console, dependsOn: 'classes', type: JavaExec) {
+  main = 'groovy.ui.Console'
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+
+
+// 

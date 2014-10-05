@@ -73,6 +73,11 @@ gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.primes.UsePrimesGroovyWithGuava -PmainArgs="10000000 100 30"      
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.fileSize.ConcurrentFileSizeWGPars -PmainArgs="/home/ericm/github"     
 
+
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.refactoredFileSize.ConcurrentFileSizeWGPars -PmainArgs="/home/ericm/github"
+
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch008.csFileSize.ConcurrentFileSizeWGPars -PmainArgs="/home/ericm/github"     
+
 Venkat, Chapter 09:
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.HollywoodActorRunner         
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.OtherRunner         

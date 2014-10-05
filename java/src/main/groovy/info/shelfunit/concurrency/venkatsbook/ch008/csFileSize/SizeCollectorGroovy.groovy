@@ -1,16 +1,17 @@
-package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
+package info.shelfunit.concurrency.venkatsbook.ch008.csFileSize;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import groovy.transform.CompileStatic
 
 import groovyx.gpars.actor.DynamicDispatchActor
 
+@CompileStatic
 class SizeCollectorGroovy extends DynamicDispatchActor {
     // these are created and initialized upon instantiation
     // a list of files/directories to process
-    def toProcessFileNames = []
-    def idleFileProcessors = []
+    List< FileToProcessGroovy > toProcessFileNames = []
+    List< FileProcessorGroovy > idleFileProcessors = []
     private long pendingNumberOfFilesToVisit = 0L
     private long totalSize = 0L
     private long start = System.nanoTime()

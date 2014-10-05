@@ -29,7 +29,7 @@ class SizeCollector extends DynamicDispatchActor {
 
   void onMessage( RequestAFile message ) {
       // println( "idleFileProcessors message is a " + message.class.name )
-      // println( "idleFileProcessors sender is a " + sender.class.name )
+      println( "idleFileProcessors sender is a " + sender.class.name )
       idleFileProcessors.add( sender )
       sendAFileToProcess()
   }

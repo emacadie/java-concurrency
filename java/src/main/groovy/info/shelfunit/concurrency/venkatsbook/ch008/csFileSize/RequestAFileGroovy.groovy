@@ -1,5 +1,4 @@
-package info.shelfunit.concurrency.venkatsbook.ch008.fileSize;
-
+package info.shelfunit.concurrency.venkatsbook.ch008.csFileSize;
 
 final class RequestAFileGroovy {
     final FileProcessorGroovy fileProcessorGroovy
