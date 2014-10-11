@@ -6,7 +6,7 @@ So far, this has turned out to be a bust. I have not been able to determine why 
 
 -------------------------
 
-I prefer extending the DynamicDispatchActor over DefaultActor. Some would say that DefaultActor is more idiomatic Groovy. Groovy DSLs are nice, but sometimes the indentation can get pretty crazy. You go three or four or more levels in and it looks a bit crazy. Plus it can just be hard to keep track of stuff in my opinion.    
+I prefer extending the DynamicDispatchActor over DefaultActor. Some would say that DefaultActor is more idiomatic Groovy. Groovy DSLs are nice, but sometimes the indentation can get to be a bit too much. You have to go three or four or more levels in to do the actual work. Plus it can just be hard to keep track of stuff in my opinion.    
 
 This is pretty much the same as the file size program with Akka from chapter 8. I refactored it to use the then-latest version of Akka, and then I refactored it here with GPars. While completing this refactoring, I did some digging, and saw that there is another GPars refactoring in chapter 9.   
 
