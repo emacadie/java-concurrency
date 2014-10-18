@@ -4,7 +4,7 @@ def final class FileToProcessGroovy {
 
     final String fileName;
 
-    def FileToProcessGroovy( final String name ) {
+    FileToProcessGroovy( final String name ) {
         fileName = name;
     }
 

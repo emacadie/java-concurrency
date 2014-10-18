@@ -1,5 +1,7 @@
 This is another set of files to get the file size of a directory tree. It is a refactoring of the Akka code in Chapter 8.    
 
+This is an attempt to get it to run with the @CompileStatic annotation.   
+
 I prefer extending the DynamicDispatchActor over DefaultActor. Some would say that DefaultActor is more idiomatic Groovy. Groovy DSLs are nice, but sometimes the indentation can get to be a bit too much. You have to go three or four or more levels in to do the actual work. Plus it can just be hard to keep track of stuff in my opinion.    
 
 This is pretty much the same as the file size program with Akka from chapter 8. I refactored it to use the then-latest version of Akka, and then I refactored it here with GPars. While completing this refactoring, I did some digging, and saw that there is another GPars refactoring in chapter 9.   

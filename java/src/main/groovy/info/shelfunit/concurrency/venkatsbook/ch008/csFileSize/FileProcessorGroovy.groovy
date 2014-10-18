@@ -12,7 +12,7 @@ class FileProcessorGroovy extends DynamicDispatchActor {
 
     SizeCollectorGroovy sizeCollector;
 
-    def FileProcessorGroovy( theSizeCollector ) {
+    def FileProcessorGroovy( SizeCollectorGroovy theSizeCollector ) {
         sizeCollector = theSizeCollector;
         registerToGetFile()
     }

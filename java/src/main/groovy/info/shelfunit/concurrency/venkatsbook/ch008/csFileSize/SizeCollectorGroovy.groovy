@@ -20,7 +20,7 @@ class SizeCollectorGroovy extends DynamicDispatchActor {
 
     void sendAFileToProcess() {
         if ( !toProcessFileNames.isEmpty() && !idleFileProcessors.isEmpty() ) {
-            idleFileProcessors.remove( 0 ).send( new FileToProcessGroovy( toProcessFileNames.remove( 0 ) ) )
+            idleFileProcessors.remove( 0 ).send( new FileToProcessGroovy( toProcessFileNames.remove( 0 ).fileName ) )
         }
     } // sendAFileToProcess
 	
@@ -37,7 +37,7 @@ class SizeCollectorGroovy extends DynamicDispatchActor {
 	}
 	
 	void onMessage( FileToProcessGroovy message ) {
-	    toProcessFileNames.add( message.fileName )
+	  toProcessFileNames.add( message ) // .fileName )
 	    pendingNumberOfFilesToVisit += 1
 	    // println "Here is FileToProcessGroovy sender: ${sender}"
 	    sendAFileToProcess()
