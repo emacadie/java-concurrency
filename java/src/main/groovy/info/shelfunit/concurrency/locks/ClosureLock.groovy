@@ -1,6 +1,7 @@
 package info.shelfunit.concurrency.locks
 
-import java.util.concurrent.locks.*
+import java.util.concurrent.locks.Lock
+import java.util.concurrent.locks.ReentrantLock
 
 class ClosureLock { 
   def lockSomeCode( block ) { 
