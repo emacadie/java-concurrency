@@ -30,24 +30,19 @@ allprojects {
     testRuntime 'ch.qos.logback:logback-core:1.0.+'
     testRuntime 'ch.qos.logback:logback-classic:1.0.+'
 
-    compile 'org.codehaus.groovy:groovy-all:2.1.0'
+    compile 'org.codehaus.groovy:groovy-all:2.4.0'
     compile 'org.clojure:clojure:1.5.1'
 
-    // for Akka
-    // This works: compile 'com.typesafe.akka:akka-actor_2.10:2.1.4'
     compile 'com.typesafe.akka:akka-actor_2.10:2.2.0-RC2'
     compile 'com.typesafe.akka:akka-transactor_2.10:2.2.0'
 
     // ScalaSTM, since that is what Akka uses for STM
     compile 'org.scala-stm:scala-stm_2.10:0.7'
 
-    // Multiverse
     compile 'org.multiverse:multiverse-core:0.7.0'
     
-    // Guava
     compile 'com.google.guava:guava:14.0.1'
 
-    // GPars
     compile 'org.codehaus.gpars:gpars:1.2.0'
   }
 

@@ -95,6 +95,7 @@ gradle runJava -PmainClass=info.shelfunit.concurrency.venkatsbook.ch009.MyActorR
 
 To run the ClosureLock class:    
 gradle runGroovy -PmainClass=info.shelfunit.concurrency.locks.FirstLockRunner    
+gradle runGroovy -PmainClass=info.shelfunit.concurrency.locks.SecondLockRunner  
 
 Code in the info.shelfunit.concurrency.venkatsbook.multithreadtests package is from "Test Driving Multithreaded Code" at http://www.agiledeveloper.com/downloads.html     
 

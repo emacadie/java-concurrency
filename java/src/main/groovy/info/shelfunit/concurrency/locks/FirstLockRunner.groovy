@@ -33,7 +33,7 @@ class FirstLockRunner {
 
   }
 
-  def static void main(String[] args) { 
+  def static void main( String[] args ) { 
     FirstLockRunner flr = new FirstLockRunner()
     flr.doStuff()
   }
