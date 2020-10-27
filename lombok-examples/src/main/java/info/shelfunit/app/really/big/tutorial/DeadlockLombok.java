@@ -9,7 +9,7 @@ import lombok.Synchronized;
 public class DeadlockLombok {
  
     static class Friend {
-        private final Object readLock = new Object();
+        private final Object readLock  = new Object();
         private final Object readLock2 = new Object();
         private final String name;
         public Friend( String name ) {

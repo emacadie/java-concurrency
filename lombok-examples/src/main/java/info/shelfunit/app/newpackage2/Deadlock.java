@@ -52,7 +52,7 @@ public class Deadlock extends Object {
         final Deadlock obj2 = new Deadlock( "Thread 2" );
  
         Runnable runA = new Runnable() {
-		public void run() {
+		    public void run() {
 		    obj1.checkOther( obj2 );
 		}
 	    };
@@ -67,7 +67,7 @@ public class Deadlock extends Object {
         }
  
         Runnable runB = new Runnable() {
-		public void run() {
+		    public void run() {
 		    obj2.checkOther( obj1 );
 		}
 	    };

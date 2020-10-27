@@ -1,27 +1,27 @@
 package info.shelfunit.app.fromlinkedin;
  
 // Lombok-ed version of a class posted in a LinkedIn group discussion
- 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 import java.util.UUID;
 import lombok.Synchronized;
  
 class LockA {
-    private final Object objID2 = new Object();
+    private final Object doBLock = new Object[ 0 ];
+    private final Object doALock = new Object[ 0 ];
     private String uuid = UUID.randomUUID().toString();
-     
-    // synchronized void doA(){
-    @Synchronized void doA() {
-        System.out.println( "In doA for " + uuid );
+
+    void doA() {
+        synchronized( doALock ) {
+            System.out.println("In doA for " + uuid);
+        }
     }
-     
-    // synchronized void doB( LombokA another ) {
-    @Synchronized( "objID2" ) void doB( LockA another ) {
-        System.out.println( "objID2.hashCode(): " + objID2.hashCode() );
-        doA();
-        another.doA();
+
+    void doB( LockA another ) {
+        synchronized ( doBLock ) {
+            System.out.println("doBLock.hashCode(): " + doBLock.hashCode());
+            doA();
+            another.doA();
+        }
     }
  
     public static void main( String[] args ) {

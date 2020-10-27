@@ -24,4 +24,6 @@ tree*txt
 /target/*
 .gradle/*
 build/*
+.idea/
+gradle/
 #- EOF
